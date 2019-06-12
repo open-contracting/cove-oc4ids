@@ -1,0 +1,5 @@
+
+# Mark the minified files as binary so we don't git grep them
+*min.js binary
+*.map binary
+cove_oc4ids/static/dataexplore/css/bootstrap-oc4ids.css binary

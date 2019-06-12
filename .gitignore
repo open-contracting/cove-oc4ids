@@ -1,0 +1,9 @@
+*.sqlite3
+*.swp
+*.mo
+*~
+.ve
+.ve2
+*.pyc
+__pycache__
+.ve
