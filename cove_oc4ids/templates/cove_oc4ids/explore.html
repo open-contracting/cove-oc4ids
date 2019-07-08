@@ -28,7 +28,7 @@
           {% else %}
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% trans "Passed " %}
           {% endif %}
-          {% blocktrans %}structural checks against {% endblocktrans %}<a href="{{ schema_url }}">OC4IDS record package schema version {{ version_used_display }}</a>.
+          {% blocktrans %}structural checks against {% endblocktrans %}<a href="{{ schema_url }}">OC4IDS project package schema version {{ version_used_display }}</a>.
           {% if validation_errors %}<br/>{% blocktrans %}See <a href="#validation-errors">Structural Errors</a> below.{% endblocktrans %}{% endif %}
         </div>
 
@@ -36,21 +36,20 @@
           <strong>At a glance</strong>
           <ul>
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              {% blocktrans count count=records_aggregates.count %}This file contains <strong>{{count}} record.</strong>{% plural %}This file contains <strong>{{count}} record.</strong>{% endblocktrans %}
+              {% blocktrans count count=json_data.projects|length %}This file contains <strong>{{count}} project.</strong>{% plural %}This file contains <strong>{{count}} projects.</strong>{% endblocktrans %}
             </li>
             {% if data_schema_version %}
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
               {% trans "The schema version specified in the file is" %} <strong>{{data_schema_version}}</strong>.
             </li>
             {% endif %}
-            <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              {% blocktrans count count=records_aggregates.unique_ocids|length %}There is <strong>{{count}} unique OCID.</strong>{% plural %}There are <strong>{{count}} unique OCIDs.</strong>{% endblocktrans %}
-            </li>
+
             {% if json_data.publisher %}
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
               {% trans "The publisher named in the file is" %} <strong>{{json_data.publisher.name}}</strong>.
             </li>
             {% endif %}
+
             {% if json_data.license %}
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
               {% trans "The license is" %} <a href="{{json_data.license}}">{{json_data.license}}</a>.
