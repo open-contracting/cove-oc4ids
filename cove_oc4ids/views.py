@@ -68,7 +68,7 @@ def explore_oc4ids(request, pk):
 
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
 
-        context.update(convert_json(upload_dir, upload_url, file_name, lib_cove_oc4ids_config, pkg_schema_url=schema_oc4ids.release_pkg_schema_url,
+        context.update(convert_json(upload_dir, upload_url, file_name, lib_cove_oc4ids_config,
                                     schema_url=schema_oc4ids.release_schema_url, replace=True,
                                     request=request, flatten=True))
 
