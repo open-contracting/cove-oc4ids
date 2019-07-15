@@ -1,0 +1,18 @@
+language: python
+addons:
+    chrome: stable
+
+python:
+  - "3.6"
+
+env:
+  global:
+    - DISPLAY=:99.0
+
+install:
+  - "pip install -r requirements_dev.txt"
+  - "wget https://chromedriver.storage.googleapis.com/75.0.3770.90/chromedriver_linux64.zip; unzip chromedriver_linux64.zip -d chromedriver; export PATH=$PATH:`pwd`/chromedriver"
+
+script:
+  - "DJANGO_SETTINGS_MODULE=cove_project.settings  python3 -m pytest ./tests/"
+  - "flake8"
