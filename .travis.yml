@@ -1,0 +1,37 @@
+language: python
+#addons:
+#    chrome: stable
+
+python:
+  - "3.6"
+
+sudo: required
+
+cache: pip
+
+env:
+  global:
+    - DISPLAY=:99.0
+    # https://github.com/SeleniumHQ/docker-selenium/issues/87 :
+    - export DBUS_SESSION_BUS_ADDRESS=/dev/null
+
+install:
+  - "pip install -r requirements_dev.txt"
+  - "sudo apt-get -y purge chromium-browser"
+  - "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+  - "sudo dpkg -i google-chrome*.deb"
+  - "sleep 3"
+  - "google-chrome &"
+  - "wget https://chromedriver.storage.googleapis.com/75.0.3770.90/chromedriver_linux64.zip; unzip chromedriver_linux64.zip -d chromedriver; export PATH=$PATH:`pwd`/chromedriver"
+
+
+before_script:
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+  - sleep 3 # give xvfb some time to start
+  - set -e # make sure we exit if one command fails
+
+script:
+  - "google-chrome --version"
+  - "google-chrome &"
+  - "DJANGO_SETTINGS_MODULE=cove_project.settings  python3 -m pytest ./tests/"
+  - "flake8"
