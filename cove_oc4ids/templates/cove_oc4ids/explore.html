@@ -38,9 +38,9 @@
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
               {% blocktrans count count=json_data.projects|length %}This file contains <strong>{{count}} project.</strong>{% plural %}This file contains <strong>{{count}} projects.</strong>{% endblocktrans %}
             </li>
-            {% if data_schema_version %}
+            {% if json_data.version %}
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-              {% trans "The schema version specified in the file is" %} <strong>{{data_schema_version}}</strong>.
+              {% trans "The schema version specified in the file is" %} <strong>{{json_data.version}}</strong>.
             </li>
             {% endif %}
 
@@ -99,16 +99,17 @@
                   </h4>
                 </div>
                 <div id="downloadData" class="collapse in panel-body">
+                  <p>{% trans "Alternative formats for reviewing your data" %}</p>
 
                      {% if conversion == 'flatten' %}
-                        <p>We have tried to convert your JSON into a spreadsheet format.</p><p>The results can be seen below.</p>
+                     <p>{% trans "Conversion of your (JSON) data into a spreadsheet format. The results can be seen below" %}.</p>
                         <ul class="list-unstyled left-space">
                           <li>
-                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span><a href="{{original_file.url}}">{{JSON}} <small>({{original}})</small></a> <small>{{original_file.size|filesizeformat }}</small>
+                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> <a href="{{original_file.url}}">{{JSON}} <small>({{original}})</small></a> <small>{{original_file.size|filesizeformat }}</small>
                           </li>
                           {% if not conversion_error %}
                             <li>
-                              <span class="glyphicon glyphicon-download" aria-hidden="true"></span><a href="{{converted_url}}.xlsx">{{xlsx}} <small>({{converted}})</small></a> <small>{{converted_file_size|filesizeformat }}</small>
+                              <span class="glyphicon glyphicon-download" aria-hidden="true"></span> <a href="{{converted_url}}.xlsx">{{xlsx}} <small>({{converted}})</small></a> <small>{{converted_file_size|filesizeformat }}</small>
                             </li>
                           {% endif %}
                         </ul>
@@ -119,7 +120,7 @@
                         {% endif %}
 
                     {% elif conversion == 'unflatten' %}
-                        <p>We have tried to convert your data into JSON format.</p><p>The results can be seen below.</p>
+                    <p>{% trans "Conversion of your data into JSON format. The results can be seen below" %}.</p>
                         <ul class="list-unstyled">
                           <li>
                             <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
@@ -173,7 +174,7 @@
               <div class="panel panel-danger">
                 <div id="validation-panel" class="panel-heading pointer" role="region" aria-expanded="true" aria-controls="validationTable" data-toggle="collapse" data-target="#validationTable">
                   <h4 class="panel-title">
-                    <span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Validation Errors' %}
+                    <span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Structural Errors' %}
                   </h4>
                 </div>
                 <div id="validationTable" class="collapse in panel-body">
@@ -184,11 +185,11 @@
              <div class="panel panel-success">
                 <div id="validation-panel" class="panel-heading pointer" role="region" aria-expanded="true" aria-controls="validationTable" data-toggle="collapse" data-target="#validationTable">
                   <h4 class="panel-title">
-                    <span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Validation Errors' %}
+                    <span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Structural Errors' %}
                   </h4>
                 </div>
                 <div id="validationTable" class="collapse in panel-body">
-                    <p>{% trans 'There were no validation errors' %}</p>
+                    <p>{% trans 'There were no structural errors' %}.</p>
                 </div>
               </div>
         {% endif %}
@@ -220,7 +221,7 @@
                   </h4>
                 </div>
                 <div id="additionalFieldsTable" class="collapse in panel-body">
-                    <p>{% trans 'There were no additional fields' %}</p>
+                    <p>{% trans 'There were no additional fields' %}.</p>
                 </div>
               </div>
         {% endif %}
