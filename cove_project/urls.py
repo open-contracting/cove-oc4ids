@@ -1,13 +1,24 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.http import HttpResponseServerError
 from django.conf import settings
 from django.template import loader
-from cove.urls import urlpatterns
-import cove_oc4ids.views
+from django.views.generic import RedirectView
 
-urlpatterns += [url(r'^data/(.+)$', cove_oc4ids.views.explore_oc4ids, name='explore')]
+from cove_oc4ids.views import explore_oc4ids
 
+urlpatterns = [
+    # Allow cove to respond on both the root url and a prefixed
+    # one
+    url(r'^$', RedirectView.as_view(pattern_name='index',
+                                    permanent=False)),
+
+    url(settings.URL_PREFIX, include('cove.urls')),
+    url(settings.URL_PREFIX + 'data/(.+)$', explore_oc4ids,
+        name='explore'),
+]
+
+# Add static media urls so that the inbuilt dev server can serve them
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
