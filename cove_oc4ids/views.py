@@ -75,8 +75,13 @@ def explore_oc4ids(request, pk):
     else:
 
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
-        context.update(convert_spreadsheet(upload_dir, upload_url, file_name, file_type, lib_cove_oc4ids_config,
-                                           schema_url=schema_oc4ids.release_schema_url, pkg_schema_url=schema_oc4ids.release_pkg_schema_url))
+        context.update(convert_spreadsheet(
+                upload_dir, upload_url,
+                file_name, file_type,
+                lib_cove_oc4ids_config,
+                schema_url=schema_oc4ids.release_schema_url,
+                pkg_schema_url=schema_oc4ids.release_pkg_schema_url))
+
         with open(context['converted_path'], encoding='utf-8') as fp:
             json_data = json.load(fp, parse_float=Decimal)
 
