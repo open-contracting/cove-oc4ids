@@ -29,7 +29,7 @@ GOOGLE_ANALYTICS_ID = settings.GOOGLE_ANALYTICS_ID
 # ... otherwise the files appear under the BASE_DIR that is the Cove library install.
 # That could get messy. We want them to appear in our directory.
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/infrastructure/media/'
 
 DEALER_TYPE = settings.DEALER_TYPE
 SECRET_KEY = settings.SECRET_KEY
@@ -121,7 +121,7 @@ LOCALE_PATHS = (os.path.join(BASE_DIR, 'cove_oc4ids', 'locale'),)
 # We can't take STATIC_URL and STATIC_ROOT from cove settings,
 # ... otherwise the files appear under the BASE_DIR that is the Cove library install.
 # and that doesn't work with our standard Apache setup.
-STATIC_URL = '/static/'
+STATIC_URL = '/infrastructure/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Misc
@@ -141,3 +141,5 @@ COVE_CONFIG = {
 
 # https://github.com/OpenDataServices/cove/issues/1098
 FILE_UPLOAD_PERMISSIONS = 0o644
+
+URL_PREFIX = r'infrastructure/review/'
