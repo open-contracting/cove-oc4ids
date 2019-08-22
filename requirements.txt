@@ -5,7 +5,7 @@ Django==1.11.22
 jsonschema==2.6.0
 -e git+https://github.com/OpenDataServices/flatten-tool.git@524f437abe48d7f9b8a2d6a1cf6fa9a49d002b0f#egg=flattentool
 -e git+https://github.com/OpenDataServices/lib-cove.git@213e5fe3145ab186e34db325d4f40fe051755b84#egg=libcove
--e git+https://github.com/OpenDataServices/lib-cove-oc4ids.git@c745ac1e0457585d823f8e949092ea2fed84dfdc#egg=libcoveoc4ids
+-e git+https://github.com/open-contracting/lib-cove-oc4ids.git@c745ac1e0457585d823f8e949092ea2fed84dfdc#egg=libcoveoc4ids
 -e git+https://github.com/OpenDataServices/lib-cove-web.git@a0609d0f7b6b410c928454e6aa7eb0234ca47da4#egg=libcoveweb
 ## The following requirements were added by pip freeze:
 bleach==3.1.0
