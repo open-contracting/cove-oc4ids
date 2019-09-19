@@ -29,15 +29,18 @@ def server_url(request, live_server):
         return live_server.url
 
 
-@pytest.mark.parametrize(('link_text', 'expected_text', 'css_selector', 'url'), [
-    ('Open Ownership', 'Anonymous shell companies', '.home', 'https://openownership.org/'),
-])
-def test_footer_oc4ids(server_url, browser, link_text, expected_text, css_selector, url):
+@pytest.mark.parametrize(('link_text', 'expected_url', 'css_selector', 'expected_text'), [(
+    'Open Contracting Partnership',
+    'https://www.open-contracting.org',
+    'title',
+    'Open Contracting Partnership',
+)])
+def test_footer_oc4ids(server_url, browser, link_text, expected_url, css_selector, expected_text):
     browser.get(server_url)
     footer = browser.find_element_by_id('footer')
     link = footer.find_element_by_link_text(link_text)
     href = link.get_attribute('href')
-    assert url in href
+    assert expected_url in href
     link.click()
     time.sleep(0.5)
     assert expected_text in browser.find_element_by_css_selector(css_selector).text
