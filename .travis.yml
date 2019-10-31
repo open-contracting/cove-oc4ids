@@ -38,3 +38,6 @@ script:
   - "google-chrome &"
   - coverage run --source cove_oc4ids,cove_project manage.py test
   - DJANGO_SETTINGS_MODULE=cove_project.settings pytest --cov cove_oc4ids --cov cove_project
+
+after_success:
+  coveralls
