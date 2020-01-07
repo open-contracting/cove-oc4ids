@@ -8,3 +8,4 @@ pytest-localserver
 selenium
 transifex-client
 libsass
+isort
