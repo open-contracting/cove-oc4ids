@@ -6,7 +6,7 @@
 #
 -e git+https://github.com/OpenDataServices/lib-cove-web.git@v0.9.1#egg=libcoveweb
 attrs==19.3.0
-bleach==3.1.0
+bleach==3.1.4
 cached-property==1.5.1
 certifi==2019.11.28
 chardet==3.0.4
@@ -18,7 +18,7 @@ dealer==2.0.5
 django-bootstrap3==12.0.3
 django-debug-toolbar==2.1
 django-environ==0.4.5
-django==1.11.27
+django==1.11.29
 docopt==0.6.2             # via coveralls
 entrypoints==0.3          # via flake8
 et-xmlfile==1.0.1
@@ -40,7 +40,6 @@ mccabe==0.6.1             # via flake8
 more-itertools==8.0.2
 openpyxl==2.6.4
 packaging==20.0           # via pytest
-pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.8.1                 # via pytest
 pycodestyle==2.5.0        # via flake8
