@@ -128,6 +128,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Misc
 
 LOGGING = settings.LOGGING
+LOGGING['handlers']['null'] = {
+    'class': 'logging.NullHandler',
+}
+LOGGING['loggers']['django.security.DisallowedHost'] = {
+    'handlers': ['null'],
+    'propagate': False,
+}
 
 # OC4IDS Config
 
