@@ -2,4 +2,4 @@
 dealer==2.0.5
 Django<1.12
 libcoveoc4ids
--e git+https://github.com/OpenDataServices/lib-cove-web.git@v0.9.1#egg=libcoveweb
+-e git+https://github.com/jpmckinney/lib-cove-web.git@sentry-sdk#egg=libcoveweb
