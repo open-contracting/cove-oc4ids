@@ -1,5 +1,4 @@
-# Lock this version of dealer because later versions have a problem - middleware is of wrong style to use with MIDDLEWARE_CLASSES
-dealer==2.0.5
-Django<1.12
+dealer
+Django>2.2<2.3
 libcoveoc4ids
--e git+https://github.com/jpmckinney/lib-cove-web.git@sentry-sdk#egg=libcoveweb
+-e git+https://github.com/OpenDataServices/lib-cove-web.git@v0.14.0#egg=libcoveweb
