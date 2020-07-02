@@ -19,6 +19,14 @@ Note: requires `gettext` to be installed. This should come by default with Ubunt
 apt-get update && apt-get install gettext
 ```
 
+## Running the tests
+
+[Set up chromedriver](https://chromedriver.chromium.org/getting-started), then run:
+
+```
+DJANGO_SETTINGS_MODULE=cove_project.settings pytest
+```
+
 ## Translations
 
 We use Django's translation framework to provide this application in different languages.
