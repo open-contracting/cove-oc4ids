@@ -34,7 +34,7 @@ jsonref==0.2              # via -r requirements.txt, flattentool, libcove, libco
 jsonschema==3.2.0         # via -r requirements.txt, libcove, libcoveweb
 lepl==5.1.3               # via -r requirements.txt, rfc6266
 libcove==0.17.0           # via -r requirements.txt, libcoveoc4ids, libcoveweb
-libcoveoc4ids==0.1.1      # via -r requirements.txt
+libcoveoc4ids==0.1.2      # via -r requirements.txt
 libsass==0.19.4           # via -r requirements_dev.in
 lxml==4.5.0               # via -r requirements.txt, flattentool
 mccabe==0.6.1             # via flake8
