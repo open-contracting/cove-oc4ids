@@ -65,3 +65,7 @@ To check that all new text is written so that it is able to be translated you co
 
     pip install django-template-i18n-lint
     django-template-i18n-lint cove
+
+## Command-line interface
+
+[lib-cove-oc4ids](https://github.com/open-contracting/lib-cove-oc4ids) offers a command-line interface for validating OC4IDS data.
