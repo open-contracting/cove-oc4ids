@@ -34,7 +34,7 @@ We have used Google Translate to perform initial translations from English, but 
 
 ### Translations for Translators
 
-Translators can provide translations for this application by becomming a collaborator on Transifex https://www.transifex.com/OpenDataServices/cove
+Translators can provide translations for this application by becomming a collaborator on Transifex https://www.transifex.com/open-contracting-partnership-1/cove-1/
 
 ### Translations for Developers
 
