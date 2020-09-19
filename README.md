@@ -2,7 +2,7 @@
 
 ## Dev installation
 
-    git clone https://github.com/opendataservices/cove-oc4ids.git
+    git clone https://github.com/open-contracting/cove-oc4ids.git
     cd cove-oc4ids
     virtualenv .ve --python=/usr/bin/python3
     source .ve/bin/activate
