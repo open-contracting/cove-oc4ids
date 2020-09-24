@@ -150,3 +150,6 @@ COVE_CONFIG = {
 FILE_UPLOAD_PERMISSIONS = 0o644
 
 URL_PREFIX = r'infrastructure/review/'
+
+# Because of how the standard site proxies traffic, we want to use this
+USE_X_FORWARDED_HOST = True
