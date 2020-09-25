@@ -153,3 +153,9 @@ URL_PREFIX = r'infrastructure/review/'
 
 # Because of how the standard site proxies traffic, we want to use this
 USE_X_FORWARDED_HOST = True
+
+# This Cove is served from the same domain as another Django app.
+# To make sure sessions and CSRF tokens don't clash, use different names.
+# https://github.com/open-contracting/deploy/issues/188
+CSRF_COOKIE_NAME = 'oc4idscsrftoken'
+SESSION_COOKIE_NAME = 'oc4idssessionid'
