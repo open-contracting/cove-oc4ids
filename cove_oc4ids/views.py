@@ -79,7 +79,7 @@ def explore_oc4ids(request, pk):
                 file_name, file_type,
                 lib_cove_oc4ids_config,
                 schema_url=schema_oc4ids.schema_url,
-                pkg_schema_url=schema_oc4ids.release_pkg_schema_url))
+                pkg_schema_url=schema_oc4ids.pkg_schema_url))
 
         with open(context['converted_path'], encoding='utf-8') as fp:
             json_data = json.load(fp, parse_float=Decimal)
