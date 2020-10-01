@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-09 08:02+0000\n"
+"POT-Creation-Date: 2020-10-01 15:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,283 +17,239 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cove_bods/templates/cove_bods/additional_checks_table.html:6
-msgid "Check"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:7
-msgid "Information"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:8
-msgid "Where problem occurs"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:16
-msgid "The statement has an identifier scheme which is not valid."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:19
-msgid "Invalid Scheme"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:28
-msgid ""
-"This statement references an entity but that entity is defined after this "
-"statement."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:31
-#: cove_bods/templates/cove_bods/additional_checks_table.html:43
-msgid "Entity that is out of order"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:40
-msgid ""
-"This statement references a person but that person is defined after this "
-"statement."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:52
-msgid ""
-"This entity statement is not used in any ownership or control statements."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:63
-msgid ""
-"This person statement is not used in any ownership or control statements."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:74
-msgid ""
-"This entity statement is referenced from an ownership or control statement, "
-"but it is missing."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:77
-msgid "Entity that is missing"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:86
-msgid ""
-"This person statement is referenced from an ownership or control statement, "
-"but it is missing."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:89
-msgid "Person that is missing"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:98
-msgid "This statement ID has been used more than once."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:101
-msgid "Statement ID"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:110
-msgid "This person statement has a birthday that is to early."
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:113
-#: cove_bods/templates/cove_bods/additional_checks_table.html:125
-msgid "Year"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/additional_checks_table.html:122
-msgid "This person statement has a birthday that is to late."
-msgstr ""
-
 #. Translators: Label of a button that triggers search
-#: cove_bods/templates/cove_bods/base.html:44
+#: cove_oc4ids/templates/cove_oc4ids/base.html:44
 msgid "Go"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:51
+#: cove_oc4ids/templates/cove_oc4ids/base.html:51
 msgid " Data Review Tool"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:54
-msgid " Standard Documentation "
+#: cove_oc4ids/templates/cove_oc4ids/base.html:54
+msgid " OC4IDS Documentation "
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:77
-msgid "Open Ownership"
+#: cove_oc4ids/templates/cove_oc4ids/base.html:77
+msgid "Open Contracting Partnership"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:78
-msgid "Beneficial Ownership Data Standard"
+#: cove_oc4ids/templates/cove_oc4ids/base.html:78
+msgid "CoST - Infrastructure Transparency Initiative"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:87
-msgid "About BODS "
+#: cove_oc4ids/templates/cove_oc4ids/base.html:79
+msgid "Open Contracting for Infrastructure Data Standards Toolkit"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:96
-msgid "Check and Review"
+#: cove_oc4ids/templates/cove_oc4ids/base.html:88
+msgid "About OC4IDS"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:110
-msgid "Using the data review tool"
+#: cove_oc4ids/templates/cove_oc4ids/base.html:97
+msgid "Check and review"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:122
+#: cove_oc4ids/templates/cove_oc4ids/base.html:116
+msgid "Using the Data Review Tool"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:138
 msgid "Built by"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:122
+#: cove_oc4ids/templates/cove_oc4ids/base.html:138
 msgid "Open Data Services"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:139
 msgid "The code for this site is available on"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:139
 msgid "GitHub"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:139
 msgid "Licence"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:139
 msgid "AGPLv3"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:139
 msgid "Report/View issues"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:123
-msgid "cove-bods issues"
+#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+msgid "cove-oc4ids issues"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/base.html:128
+#: cove_oc4ids/templates/cove_oc4ids/base.html:144
 msgid "Running version "
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:5
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:6
 msgid "Load New File"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:14
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:18
+msgid "Headlines"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:23
+msgid ""
+"Please read the <a href=\"#conversion-warning\">conversion warnings</a> "
+"below."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:27
+msgid "Failed "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:29
+msgid "Passed "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:31
+#, python-format
+msgid ""
+"structural checks against <a href=\"%(schema_url)s\">OC4IDS project package "
+"schema version "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:32
+msgid "See <a href=\"#validation-errors\">Structural Errors</a> below."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:36
+msgid "At a glance"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:39
+#, python-format
+msgid "This file contains <strong>%(count)s project.</strong>"
+msgid_plural "This file contains <strong>%(count)s projects.</strong>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:43
+msgid "The schema version specified in the file is"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:49
+msgid "The publisher named in the file is"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:55
+msgid "The license is"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:62
+msgid "Publication policy is"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:70
+#, python-format
+msgid ""
+"There is %(count)s <a href=\"#key-field-info\">duplicate release ID</a> in "
+"this package."
+msgid_plural ""
+"There are %(count)s <a href=\"#key-field-info\">duplicate release IDs</a> in "
+"this package."
+msgstr[0] ""
+msgstr[1] ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:76
+#, python-format
+msgid ""
+"This file uses %(count)s <a href=\"#additional-fields\">additional field</a> "
+"not used in the standard."
+msgid_plural ""
+"This file uses %(count)s <a href=\"#additional-fields\">additional fields</"
+"a> not used in the standard."
+msgstr[0] ""
+msgstr[1] ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:81
+msgid "This file is not 'utf-8' encoded (it is"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:81
+msgid "encoded)."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:85
+msgid "Data "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:87
+msgid "downloaded from "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:89
+msgid "uploaded "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:91
+msgid "on "
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:107
 msgid "Download Data"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:32
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:111
+msgid "Alternative formats for reviewing your data"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:114
+msgid ""
+"Conversion of your (JSON) data into a spreadsheet format. The results can be "
+"seen below"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:126
 msgid "The JSON could not be converted to Spreadsheet due to the error:"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:64
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:132
+msgid "Conversion of your data into JSON format. The results can be seen below"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:158
 msgid "Convert to Spreadsheet"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:94
-#: cove_bods/templates/cove_bods/explore.html:105
-msgid "Validation Errors"
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:186
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:197
+msgid "Structural Errors"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:109
-msgid "There were no validation errors!"
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:201
+msgid "There were no structural errors"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:126
-#: cove_bods/templates/cove_bods/explore.html:137
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:218
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:229
 msgid "Additional Fields"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:141
-msgid "There were no additional fields!"
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:233
+msgid "There were no additional fields"
 msgstr ""
 
-#: cove_bods/templates/cove_bods/explore.html:156
-#: cove_bods/templates/cove_bods/explore.html:167
-msgid "Additional Checks"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:171
-msgid "All checks passed!"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:183
-msgid "Statistics"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:189
-msgid "Entity Statements"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:191
-#: cove_bods/templates/cove_bods/explore.html:217
-#: cove_bods/templates/cove_bods/explore.html:231
-msgid "Total Statements"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:196
-#: cove_bods/templates/cove_bods/explore.html:222
-#: cove_bods/templates/cove_bods/explore.html:260
-#, python-format
-msgid " ... with type %(key)s"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:205
-#, python-format
-msgid "%% of registered or legal entities with any identifier"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:210
-#, python-format
-msgid ""
-"%% of registered or legal entities with an identifier that have a 'strict' "
-"identifier"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:215
-msgid "Person Statements"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:229
-msgid "Ownership or Control Statements"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:235
-msgid " ... where interested party is a person"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:242
-msgid " ... where interested party is a entity"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:249
-msgid " ... where interested party is unspecified"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:255
-msgid "Total Interest Statements"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:268
-msgid "Misc"
-msgstr ""
-
-#: cove_bods/templates/cove_bods/explore.html:271
-msgid ""
-"Count of previous statements that are referenced from replacesStatement and "
-"are missing"
-msgstr ""
-
-#: cove_bods/views.py:55 cove_bods/views.py:66
+#: cove_oc4ids/views.py:51 cove_oc4ids/views.py:62
 msgid "Sorry, we can't process that data"
 msgstr ""
 
-#: cove_bods/views.py:57 cove_bods/views.py:68
+#: cove_oc4ids/views.py:53 cove_oc4ids/views.py:64
 msgid "Try Again"
 msgstr ""
 
-#: cove_bods/views.py:69
+#: cove_oc4ids/views.py:65
 msgid ""
-"BODS JSON should have a list as the top level, the JSON you supplied does "
-"not."
+"OC4IDS JSON should have an object as the top level, the JSON you supplied "
+"does not."
 msgstr ""
