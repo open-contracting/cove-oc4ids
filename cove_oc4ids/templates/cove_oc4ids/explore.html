@@ -205,8 +205,6 @@
 
     </div>
 
-
-
     <div class="row">
 
         {% if additional_fields_count %}
@@ -236,6 +234,24 @@
         {% endif %}
 
     </div>
+
+    {% if additional_checks %}
+    <div class="row">
+
+      <a name="additional_checks" class="anchor"></a>
+      <div class="panel panel-warning">
+        <div id="additional-checks-panel" class="panel-heading pointer" role="region" aria-expanded="true" aria-controls="additionalChecksTable" data-toggle="collapse" data-target="#additionalChecksTable">
+          <h4 class="panel-title">
+            <span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Additional Checks' %}
+          </h4>
+        </div>
+        <div id="additionalChecksTable" class="collapse in">
+          {% include "cove_oc4ids/additional_checks_table.html" %}
+        </div>
+      </div>
+
+    </div>
+    {% endif %}
 
 {% endblock explore_content %}
 
