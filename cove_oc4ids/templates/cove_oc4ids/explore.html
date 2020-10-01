@@ -28,12 +28,12 @@
           {% else %}
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% trans "Passed " %}
           {% endif %}
-          {% blocktrans %}structural checks against {% endblocktrans %}<a href="{{ schema_url }}">OC4IDS project package schema version {{ version_used_display }}</a>.
+          {% blocktrans %}structural checks against <a href="{{ schema_url }}">OC4IDS project package schema version {% endblocktrans %}{{ version_used_display }}</a>.
           {% if validation_errors %}<br/>{% blocktrans %}See <a href="#validation-errors">Structural Errors</a> below.{% endblocktrans %}{% endif %}
         </div>
 
         <div class="key-facts message">
-          <strong>At a glance</strong>
+          <strong>{% trans 'At a glance' %}</strong>
           <ul>
             <li><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
               {% blocktrans count count=json_data.projects|length %}This file contains <strong>{{count}} project.</strong>{% plural %}This file contains <strong>{{count}} projects.</strong>{% endblocktrans %}
