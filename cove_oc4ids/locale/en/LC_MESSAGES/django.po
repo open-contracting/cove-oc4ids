@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 17:15+0000\n"
+"POT-Creation-Date: 2020-10-06 16:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:7
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:8
 msgid "Check Description"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:8
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:9
 msgid "Location of first 3 errors"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:15
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:16
 msgid ""
 "The data includes fields that are empty or contain only whitespaces. Fields "
 "that are not being used, or that have no value, should be excluded in their "
@@ -61,12 +61,104 @@ msgstr ""
 msgid "About OC4IDS"
 msgstr ""
 
+#: cove_oc4ids/templates/cove_oc4ids/base.html:89
+msgid ""
+"The <a href=\"https://standard.open-contracting.org/infrastructure/\">Open "
+"Contracting for Infrastructure Data Standard</a> (OC4IDS) describes how to "
+"combine contract-level disclosures (using the Open Contracting Data "
+"Standard) and project-level disclosures (based on the CoST Infrastructure "
+"Data Standard) to support scalable disclosure and monitoring of "
+"infrastructure projects."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:91
+#, python-format
+msgid ""
+"Trillions of dollars are spent every year on infrastructure and estimates "
+"suggest between 10 and 30%% of infrastructure investment is lost through "
+"inefficiency, mismanagement and corruption. Access to better and more joined "
+"up data is essential to drive better quality, more affordable and more "
+"accessible infrastructure for government, citizens and business."
+msgstr ""
+
 #: cove_oc4ids/templates/cove_oc4ids/base.html:97
 msgid "Check and review"
 msgstr ""
 
+#: cove_oc4ids/templates/cove_oc4ids/base.html:98
+msgid "This tool helps you to:"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:100
+msgid "Check that your OC4IDS data complies with the schema"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:101
+msgid "Inspect key contents of your data to review data quality"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:102
+msgid ""
+"Access your data in different formats (spreadsheet and JSON) to support "
+"further review."
+msgstr ""
+
 #: cove_oc4ids/templates/cove_oc4ids/base.html:116
 msgid "Using the Data Review Tool"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:117
+msgid ""
+"You can upload, paste or provide a link to data published using the <a href="
+"\"https://standard.open-contracting.org/infrastructure/\">Open Contracting "
+"for Infrastructure Data Standard</a>"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:117
+msgid " This can be:"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:119
+msgid "<strong>A JSON file</strong> - following the OC4IDS schema;"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:120
+msgid ""
+"<strong>A CSV file or Excel Spreadsheet</strong> - using a flattened "
+"serialization of OC4IDS;"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:122
+msgid ""
+"Supported encodings are UTF-8 for JSON and UTF-8, Windows-1252 and "
+"ISO-8859-1 for CSV."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:123
+msgid ""
+"The application works with data provided in an <a href=\"http://standard."
+"open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
+"project package</a>."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:124
+msgid ""
+"If your data passes basic structural checks, the tool will then present a "
+"report on data quality, and information about the contents of your file. It "
+"will also offer alternative copies of the data for download."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:125
+msgid ""
+"Data is stored for 7 days at a randomly generated URL. You can share this "
+"link with others to support discussion of data quality."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:126
+msgid ""
+"To preview how the data review tool works, try loading some <a href=\"?"
+"source_url=http://standard.open-contracting.org/infrastructure/latest/en/"
+"_static/example.json\">sample data</a>."
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:138
