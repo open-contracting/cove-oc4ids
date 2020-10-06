@@ -110,25 +110,7 @@
                 <div id="downloadData" class="collapse in panel-body">
                   <p>{% trans "Alternative formats for reviewing your data" %}</p>
 
-                     {% if conversion == 'flatten' %}
-                     <p>{% trans "Conversion of your (JSON) data into a spreadsheet format. The results can be seen below" %}.</p>
-                        <ul class="list-unstyled left-space">
-                          <li>
-                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> <a href="{{original_file.url}}">{{JSON}} <small>({{original}})</small></a> <small>{{original_file.size|filesizeformat }}</small>
-                          </li>
-                          {% if not conversion_error %}
-                            <li>
-                              <span class="glyphicon glyphicon-download" aria-hidden="true"></span> <a href="{{converted_url}}.xlsx">{{xlsx}} <small>({{converted}})</small></a> <small>{{converted_file_size|filesizeformat }}</small>
-                            </li>
-                          {% endif %}
-                        </ul>
-                        {% if conversion_error %}
-                            <p>{% blocktrans %}The JSON could not be converted to Spreadsheet due to the error:{% endblocktrans %} {{ conversion_error }}</p>
-
-                            {% include 'error_extra.html' %}
-                        {% endif %}
-
-                    {% elif conversion == 'unflatten' %}
+                    {% if conversion == 'unflatten' %}
                     <p>{% trans "Conversion of your data into JSON format. The results can be seen below" %}.</p>
                         <ul class="list-unstyled">
                           <li>
