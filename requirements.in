@@ -2,4 +2,3 @@ dealer
 Django>2.2<2.3
 libcoveoc4ids>=0.2.0
 libcoveweb>=0.16.0
--e git+https://github.com/jpmckinney/lib-cove.git@hotfix#egg=libcove
