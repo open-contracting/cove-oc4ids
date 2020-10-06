@@ -11,13 +11,8 @@ from django.core.files.base import ContentFile
     'null',
     '1',
     '{}',
-    None,
 ])
 def test_explore_page(client, json_data):
-    if json_data is None:
-        with open('data.json') as f:
-            json_data = f.read()
-
     data = SuppliedData.objects.create()
     data.original_file.save('test.json', ContentFile(json_data))
     data.current_app = 'cove_oc4ids'
