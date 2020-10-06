@@ -7,7 +7,7 @@ from cove.views import explore_data_context
 from django.shortcuts import render
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
-from libcove.lib.converters import convert_json, convert_spreadsheet
+from libcove.lib.converters import convert_spreadsheet
 from libcove.lib.exceptions import CoveInputDataError
 from libcoveoc4ids.common_checks import common_checks_oc4ids
 from libcoveoc4ids.config import LibCoveOC4IDSConfig
