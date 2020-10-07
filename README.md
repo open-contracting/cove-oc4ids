@@ -1,5 +1,13 @@
 # cove-oc4ids
 
+## Production installation
+
+We recommened deploying [Django using uWSGI](https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/uwsgi/) and [Apache http server using mod_proxy](https://uwsgi-docs.readthedocs.io/en/latest/Apache.html#mod-proxy-uwsgi)
+
+### Caching
+
+In non-dev or (not DEBUG mode) the default settings make use of a local memcached server. This backend requires a local memcached server running. On debian based systems this can be installed with `apt install memcached`.
+
 ## Dev installation
 
     git clone https://github.com/open-contracting/cove-oc4ids.git
