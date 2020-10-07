@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = (
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -64,6 +65,7 @@ MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
     'dealer.contrib.django.Middleware',
     'cove.middleware.CoveConfigCurrentApp',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 
@@ -159,3 +161,14 @@ USE_X_FORWARDED_HOST = True
 # https://github.com/open-contracting/deploy/issues/188
 CSRF_COOKIE_NAME = 'oc4idscsrftoken'
 SESSION_COOKIE_NAME = 'oc4idssessionid'
+
+if not DEBUG:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'LOCATION': '127.0.0.1:11211',
+            'OPTIONS': {
+                'server_max_value_length': 1024 * 1024 * 2,
+            }
+        }
+    }
