@@ -70,6 +70,28 @@
           </tr>
         {% endif %}
 
+        {% if check.check_id == 'missing-org-refs' %}
+          <tr>
+            <td>
+              {% blocktrans trimmed count counter=check.paths|length %}
+              There is an organization reference with an <code>id</code> that does not match the <code>id</code> of any <code>parties</code>.
+              {% plural %}
+              There are {{ counter }} organization references with an <code>id</code> that does not match the <code>id</code> of any <code>parties</code>.
+              {% endblocktrans %}
+              &nbsp;
+              {% blocktrans %}All organization references should have an associated entry in the <code>parties</code> array with a matching <code>id</code>.{% endblocktrans %}
+            <td>
+              <ul class="list-unstyled">
+                {% for path in check.paths|slice:":3" %}
+                  <li>{{ path }}</li>
+                {% endfor %}
+                {% if check.paths|length > 3 %}
+                  <li><a data-toggle="modal" data-target=".additional-checks-{{check.check_id}}"><sup>{% trans "see all" %}</sup></a></li>
+                {% endif %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
 
       {% endfor %}
     </tbody>
