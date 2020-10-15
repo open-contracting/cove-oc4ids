@@ -13,7 +13,7 @@
       {% for check in additional_checks %}
         {% if check.check_id == 'missing-values' %}
           <tr>
-            <td>{% trans 'The data includes fields that are empty or contain only whitespaces. Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from the data' %}</td>
+            <td>{% trans 'The data includes fields that are empty or contain only whitespaces. Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from the data.' %}</td>
             <td>
               <ul class="list-unstyled">
                 {% for path in check.paths|slice:":3" %}
@@ -30,10 +30,10 @@
         {% if check.check_id == 'missing-currency' %}
           <tr>
             <td>
-              {% blocktrans count counter=check.paths|length %}
-              There is a value without a currency.
+              {% blocktrans trimmed count counter=check.paths|length %}
+              There is a value without a <code>currency</code>.
               {% plural %}
-              There are {{ counter }} values without a currency.
+              There are {{ counter }} values without a <code>currency</code>.
               {% endblocktrans %}
 
               {% trans "Currencies should be published for all values." %}
@@ -54,8 +54,8 @@
         {% if check.check_id == 'invalid-project-ids' %}
           <tr>
             <td>
-              {% blocktrans with count=check.paths|length %}
-              {{ count }} of your project <code>id</code> fields has a problem: There is no prefix or the prefix is not recognised
+              {% blocktrans trimmed with count=check.paths|length %}
+              {{ count }} of your project <code>id</code> fields has a problem: There is no prefix or the prefix format is not recognised.
               {% endblocktrans %}
             <td>
               <ul class="list-unstyled">
