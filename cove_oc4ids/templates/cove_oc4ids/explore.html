@@ -247,7 +247,7 @@
           </h4>
         </div>
         <div class="panel-body">
-          {% trans 'Your data contains a number of fields that use an open codelist. You should use values from the codelist whenever possible, but if the codelist does not provide the values you need, you are permitted to add additional values. The values below do not appear in the codelist; you should check that you intended these as additional values. Where you see + or - this indicates that the codelist has been modified with these additions (+) or subtractions (-) by one or more extensions.' %}
+          {% trans 'Your data contains a number of fields that use an open codelist. You should use values from the codelist whenever possible, but if the codelist does not provide the values you need, you are permitted to add additional values. The values below do not appear in the codelist; you should check that you intended these as additional values.' %}
           <div id="additionalOpenCodelist" class="collapse in">
             {% with additional_codelist_values=additional_open_codelist_values %}
             {% include "additional_codelist_values.html" %}
