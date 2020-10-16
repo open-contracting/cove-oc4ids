@@ -1,9 +1,8 @@
-import functools
 import json
 import logging
 from decimal import Decimal
 
-from cove.views import explore_data_context
+from cove.views import cove_web_input_error, explore_data_context
 from django.shortcuts import render
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
@@ -16,16 +15,6 @@ from libcoveoc4ids.schema import SchemaOC4IDS
 from cove_project import settings
 
 logger = logging.getLogger(__name__)
-
-
-def cove_web_input_error(func):
-    @functools.wraps(func)
-    def wrapper(request, *args, **kwargs):
-        try:
-            return func(request, *args, **kwargs)
-        except CoveInputDataError as err:
-            return render(request, 'error.html', context=err.context)
-    return wrapper
 
 
 @cove_web_input_error
@@ -51,9 +40,9 @@ def explore_oc4ids(request, pk):
                     'sub_title': _("Sorry, we can't process that data"),
                     'link': 'index',
                     'link_text': _('Try Again'),
-                    'msg': _(format_html('We think you tried to upload a JSON file, but it is not well formed JSON.'
+                    'msg': format_html(_('We think you tried to upload a JSON file, but it is not well formed JSON.'
                                          '\n\n<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">'
-                                         '</span> <strong>Error message:</strong> {}', err)),
+                                         '</span> <strong>Error message:</strong> {}'), err),
                     'error': format(err)
                 })
 
