@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-06 16:17+0000\n"
+"POT-Creation-Date: 2020-10-16 17:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,53 @@ msgstr ""
 msgid ""
 "The data includes fields that are empty or contain only whitespaces. Fields "
 "that are not being used, or that have no value, should be excluded in their "
-"entirety (key and value) from the data"
+"entirety (key and value) from the data."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:23
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:46
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:66
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:89
+msgid "see all"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:33
+#, python-format
+msgid "There is a value without a <code>currency</code>."
+msgid_plural "There are %(counter)s values without a <code>currency</code>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:39
+msgid "Currencies should be published for all values."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:57
+#, python-format
+msgid ""
+"%(count)s of your project <code>id</code> fields has a problem: There is no "
+"prefix or the prefix format is not recognised."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:76
+#, python-format
+msgid ""
+"There is an organization reference with an <code>id</code> that does not "
+"match the <code>id</code> of any <code>parties</code>."
+msgid_plural ""
+"There are %(counter)s organization references with an <code>id</code> that "
+"does not match the <code>id</code> of any <code>parties</code>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:82
+msgid ""
+"All organization references should have an associated entry in the "
+"<code>parties</code> array with a matching <code>id</code>."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:25
+msgid "Open Contracting for Infrastructure Data Standard"
 msgstr ""
 
 #. Translators: Label of a button that triggers search
@@ -39,6 +85,10 @@ msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:51
 msgid " Data Review Tool"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:51
+msgid "beta"
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:54
@@ -347,19 +397,50 @@ msgstr ""
 msgid "There were no additional fields"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:245
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:246
+msgid "Additional Codelist Values"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:250
+msgid ""
+"Your data contains a number of fields that use an open codelist. You should "
+"use values from the codelist whenever possible, but if the codelist does not "
+"provide the values you need, you are permitted to add additional values. The "
+"values below do not appear in the codelist; you should check that you "
+"intended these as additional values."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:256
+msgid ""
+"Make sure you list the definition of any additional codelist values you "
+"include within your <a href=\"http://standard.open-contracting.org/latest/en/"
+"implementation/publication_policy/\">publication policy</a>, and if you "
+"believe they should be added as recommended values in the open codelist, "
+"please suggest this via the <a href=\"https://github.com/open-contracting/"
+"infrastructure/issues/new\">OC4IDS issue tracker.</a>"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:270
 msgid "Additional Checks"
 msgstr ""
 
-#: cove_oc4ids/views.py:51 cove_oc4ids/views.py:62
+#: cove_oc4ids/views.py:41 cove_oc4ids/views.py:52
 msgid "Sorry, we can't process that data"
 msgstr ""
 
-#: cove_oc4ids/views.py:53 cove_oc4ids/views.py:64
+#: cove_oc4ids/views.py:43 cove_oc4ids/views.py:54
 msgid "Try Again"
 msgstr ""
 
-#: cove_oc4ids/views.py:65
+#: cove_oc4ids/views.py:44
+msgid ""
+"We think you tried to upload a JSON file, but it is not well formed JSON.\n"
+"\n"
+"<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></"
+"span> <strong>Error message:</strong> {}"
+msgstr ""
+
+#: cove_oc4ids/views.py:55
 msgid ""
 "OC4IDS JSON should have an object as the top level, the JSON you supplied "
 "does not."
