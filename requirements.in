@@ -1,5 +1,6 @@
 dealer
 Django>2.2<2.3
 libcoveoc4ids>=0.3.0
-libcoveweb>=0.16.0
+libcove>=0.20.0
+libcoveweb>=0.18.0
 python-memcached
