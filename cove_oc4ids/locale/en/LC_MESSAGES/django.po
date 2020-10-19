@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 17:43+0000\n"
+"POT-Creation-Date: 2020-10-19 17:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,6 +51,7 @@ msgid "Currencies should be published for all values."
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:57
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:277
 #, python-format
 msgid ""
 "%(count)s of your project <code>id</code> fields has a problem: There is no "
@@ -420,19 +421,49 @@ msgid ""
 "infrastructure/issues/new\">OC4IDS issue tracker.</a>"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:270
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:269
+msgid "Conformance (Rules)"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:274
+msgid ""
+"Fixing the following issues will improve the interoperability of your data."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:280
+msgid "View all errors"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:285
+msgid "id"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:285
+msgid "Path"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:294
+msgid ""
+"What is the project <code>id</code> field? A globally unique identifier for "
+"this infrastructure project. Composed of an OC4IDS prefix and an identifier "
+"for the infrastructure project. For more information see <a href=\"https://"
+"standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/#"
+"\">OC4IDS project identifier guidance</a>."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:313
 msgid "Additional Checks"
 msgstr ""
 
-#: cove_oc4ids/views.py:41 cove_oc4ids/views.py:52
+#: cove_oc4ids/views.py:39 cove_oc4ids/views.py:51
 msgid "Sorry, we can't process that data"
 msgstr ""
 
-#: cove_oc4ids/views.py:43 cove_oc4ids/views.py:54
+#: cove_oc4ids/views.py:41 cove_oc4ids/views.py:53
 msgid "Try Again"
 msgstr ""
 
-#: cove_oc4ids/views.py:44
+#: cove_oc4ids/views.py:42
 msgid ""
 "We think you tried to upload a JSON file, but it is not well formed JSON.\n"
 "\n"
@@ -440,7 +471,7 @@ msgid ""
 "span> <strong>Error message:</strong> {}"
 msgstr ""
 
-#: cove_oc4ids/views.py:55
+#: cove_oc4ids/views.py:54
 msgid ""
 "OC4IDS JSON should have an object as the top level, the JSON you supplied "
 "does not."

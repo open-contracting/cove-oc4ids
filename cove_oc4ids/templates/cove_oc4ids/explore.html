@@ -259,6 +259,49 @@
     </div>
     {% endif %}
 
+    {% if conformance_checks %}
+     <div class="row">
+     {% for check in conformance_checks %}
+       <a name="conformance-rules" class="anchor"></a>
+       <div class="panel panel-danger">
+         <div id="conformance-rules-panel" class="panel-heading pointer" role="region" aria-expanded="true" aria-controls="conformanceRulesTable" data-toggle="collapse" data-target="#conformanceRulesTable">
+           <h4 class="panel-title">
+             <span class="our-title"><span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Conformance (Rules)' %}</span>
+           </h4>
+         </div>
+         <div id="conformanceRulesTable" class="collapse in">
+           <div class="panel-body">
+             <p class="explanation">{% trans 'Fixing the following issues will improve the interoperability of your data.' %}</p>
+             <br>
+             <p>
+               {% blocktrans trimmed with count=check.path_values|length %}
+               {{ count }} of your project <code>id</code> fields has a problem: There is no prefix or the prefix format is not recognised.
+               {% endblocktrans %}
+               <a class="view-all" role="region" aria-expanded="false" aria-controls="OC4IDSprefixesTable" data-toggle="collapse" data-target="#OC4IDSprefixesTable"><small>{% trans "View all errors" %} &#9660;</small></a>
+             </p>
+
+             <div id="OC4IDSprefixesTable" class="collapse">
+               <table class="table table-striped">
+                 <thead><tr><th>{% trans "id" %}</th><th>{% trans "Path" %}</th></tr></thead>
+                 <tbody>
+                   {% for result in check.path_values %}
+                   <tr><td>{{result.value}}</td><td>{{result.path}}</td></tr>
+                   {% endfor %}
+                 </tbody>
+               </table>
+             </div>
+             <p class="font-weight-light small">
+               {% blocktrans trimmed %}
+               What is the project <code>id</code> field? A globally unique identifier for this infrastructure project. Composed of an OC4IDS prefix and an identifier for the infrastructure project. For more information see <a href="https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/#">OC4IDS project identifier guidance</a>.
+               {% endblocktrans %}
+             </p>
+           </div>
+         </div>
+       </div>
+
+     {% endfor %}
+     </div>
+    {% endif %}
 
     {% if additional_checks %}
     <div class="row">
