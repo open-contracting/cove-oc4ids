@@ -476,7 +476,7 @@ msgstr "No hay campos adicionales"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:246
 msgid "Additional Codelist Values"
-msgstr ""
+msgstr "Valores Adicionales de la Lista de Código "
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:250
 msgid ""
@@ -486,6 +486,11 @@ msgid ""
 "The values below do not appear in the codelist; you should check that you "
 "intended these as additional values."
 msgstr ""
+"Sus datos contienen varios campos que usan una lista de código abierta. Debe"
+" usar los valores de la lista de código cuando sea posible, pero si la lista"
+" de código no le da los valores que necesita, puede utilizar valores "
+"adicionales. Los siguientes valores no aparecen en la lista de código, debe "
+"revisar que quiera utilizar estos valores adicionales."
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:256
 msgid ""
@@ -496,6 +501,13 @@ msgid ""
 " the open codelist, please suggest this via the <a href=\"https://github.com"
 "/open-contracting/infrastructure/issues/new\">OC4IDS issue tracker.</a>"
 msgstr ""
+"Asegúrese de dar la definición de cualquier valor adicional a la lista de "
+"código que incluya dentro de su <a href=\"http://standard.open-"
+"contracting.org/latest/en/implementation/publication_policy/\">política de "
+"publicación</a>, y si cree que deben de ser valores recomendados en la lista"
+" de código abierta, por favor haga una sugerencia en el <a "
+"href=\"https://github.com/open-contracting/infrastructure/issues/new\"> "
+"rastreador de issues OC4IDS.</a>"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:270
 msgid "Additional Checks"
