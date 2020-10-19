@@ -10,26 +10,93 @@
       </tr>
     </thead>
     <tbody>
-      {% for type, values in additional_checks.items %}
-        {% if type == 'empty_field' %}
+      {% for check in additional_checks %}
+        {% if check.check_id == 'missing-values' %}
           <tr>
-            <td>{% trans 'The data includes fields that are empty or contain only whitespaces. Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from the data' %}</td>
+            <td>{% trans 'The data includes fields that are empty or contain only whitespaces. Fields that are not being used, or that have no value, should be excluded in their entirety (key and value) from the data.' %}</td>
             <td>
               <ul class="list-unstyled">
-                {% for value in values|slice:":3" %}
-                  <li>{{ value.json_location }}</li>
+                {% for path in check.paths|slice:":3" %}
+                  <li>{{ path }}</li>
                 {% endfor %}
-                {% if values|length > 3 %}
-                  <li><a data-toggle="modal" data-target=".{{"additional-checks-"|concat:forloop.counter}}"><sup>see all</sup></a></li>
+                {% if check.paths|length > 3 %}
+                  <li><a data-toggle="modal" data-target=".additional-checks-{{check.check_id}}"><sup>{% trans "see all" %}</sup></a></li>
                 {% endif %}
               </ul>
             </td>
           </tr>
         {% endif %}
+
+        {% if check.check_id == 'missing-currency' %}
+          <tr>
+            <td>
+              {% blocktrans trimmed count counter=check.paths|length %}
+              There is a value without a <code>currency</code>.
+              {% plural %}
+              There are {{ counter }} values without a <code>currency</code>.
+              {% endblocktrans %}
+
+              {% trans "Currencies should be published for all values." %}
+            <td>
+              <ul class="list-unstyled">
+                {% for path in check.paths|slice:":3" %}
+                  <li>{{ path }}</li>
+                {% endfor %}
+                {% if check.paths|length > 3 %}
+                  <li><a data-toggle="modal" data-target=".additional-checks-{{check.check_id}}"><sup>{% trans "see all" %}</sup></a></li>
+                {% endif %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+
+
+        {% if check.check_id == 'invalid-project-ids' %}
+          <tr>
+            <td>
+              {% blocktrans trimmed with count=check.paths|length %}
+              {{ count }} of your project <code>id</code> fields has a problem: There is no prefix or the prefix format is not recognised.
+              {% endblocktrans %}
+            <td>
+              <ul class="list-unstyled">
+                {% for path in check.paths|slice:":3" %}
+                  <li>{{ path }}</li>
+                {% endfor %}
+                {% if check.paths|length > 3 %}
+                  <li><a data-toggle="modal" data-target=".additional-checks-{{check.check_id}}"><sup>{% trans "see all" %}</sup></a></li>
+                {% endif %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+
+        {% if check.check_id == 'missing-org-refs' %}
+          <tr>
+            <td>
+              {% blocktrans trimmed count counter=check.paths|length %}
+              There is an organization reference with an <code>id</code> that does not match the <code>id</code> of any <code>parties</code>.
+              {% plural %}
+              There are {{ counter }} organization references with an <code>id</code> that does not match the <code>id</code> of any <code>parties</code>.
+              {% endblocktrans %}
+              &nbsp;
+              {% blocktrans %}All organization references should have an associated entry in the <code>parties</code> array with a matching <code>id</code>.{% endblocktrans %}
+            <td>
+              <ul class="list-unstyled">
+                {% for path in check.paths|slice:":3" %}
+                  <li>{{ path }}</li>
+                {% endfor %}
+                {% if check.paths|length > 3 %}
+                  <li><a data-toggle="modal" data-target=".additional-checks-{{check.check_id}}"><sup>{% trans "see all" %}</sup></a></li>
+                {% endif %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+
       {% endfor %}
     </tbody>
 </table>
 
-{% for type, values in additional_checks.items %}
-  {% cove_modal_errors className="additional-checks-"|concat:forloop.counter modalTitle="" errorList=values|list_from_attribute:"json_location" file_type=file_type full_table=False %}
+{% for check in additional_checks %}
+  {% cove_modal_errors className="additional-checks-"|concat:check.check_id modalTitle="" errorList=check.paths file_type=file_type full_table=False %}
 {% endfor %}

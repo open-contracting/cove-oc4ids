@@ -235,6 +235,31 @@
 
     </div>
 
+    {% if additional_open_codelist_values %}
+    <div class="row">
+      <a name="additional-open-codelist-values" class="anchor"></a>
+      <div class="panel panel-warning">
+        <div id="additional-open-codelist-values-panel" class="panel-heading pointer" role="region" aria-expanded="true"
+          aria-controls="additionalOpenCodelist" data-toggle="collapse" data-target="#additionalOpenCodelist">
+          <h4 class="panel-title">
+            <span class="our-title"><span
+                class="glyphicon glyphicon-collapse-up"></span>{% trans 'Additional Codelist Values' %}</span>
+          </h4>
+        </div>
+        <div class="panel-body">
+          {% trans 'Your data contains a number of fields that use an open codelist. You should use values from the codelist whenever possible, but if the codelist does not provide the values you need, you are permitted to add additional values. The values below do not appear in the codelist; you should check that you intended these as additional values.' %}
+          <div id="additionalOpenCodelist" class="collapse in">
+            {% with additional_codelist_values=additional_open_codelist_values %}
+            {% include "additional_codelist_values.html" %}
+            {% endwith%}
+          </div>
+          {% trans 'Make sure you list the definition of any additional codelist values you include within your <a href="http://standard.open-contracting.org/latest/en/implementation/publication_policy/">publication policy</a>, and if you believe they should be added as recommended values in the open codelist, please suggest this via the <a href="https://github.com/open-contracting/infrastructure/issues/new">OC4IDS issue tracker.</a>' %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+
     {% if additional_checks %}
     <div class="row">
 
