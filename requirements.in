@@ -1,6 +1,9 @@
 dealer
 Django>2.2<2.3
 libcoveoc4ids>=0.3.0
+# The next 2 dependencies are dependencies of dependencies, but we want at
+# least a certain version
 libcove>=0.20.0
+flattentool>=0.15.0
 libcoveweb>=0.18.0
 python-memcached
