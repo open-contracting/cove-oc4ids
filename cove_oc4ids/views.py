@@ -7,7 +7,6 @@ from django.shortcuts import render
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 from libcove.lib.converters import convert_spreadsheet
-from libcove.lib.exceptions import CoveInputDataError
 from libcoveoc4ids.common_checks import common_checks_oc4ids
 from libcoveoc4ids.config import LibCoveOC4IDSConfig
 from libcoveoc4ids.schema import SchemaOC4IDS
@@ -36,7 +35,7 @@ def explore_oc4ids(request, pk):
             try:
                 json_data = json.load(fp, parse_float=Decimal)
             except ValueError as err:
-                raise CoveInputDataError(context={
+                context = {
                     'sub_title': _("Sorry, we can't process that data"),
                     'link': 'index',
                     'link_text': _('Try Again'),
@@ -44,15 +43,17 @@ def explore_oc4ids(request, pk):
                                          '\n\n<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">'
                                          '</span> <strong>Error message:</strong> {}'), err),
                     'error': format(err)
-                })
+                }
+                return render(request, 'error.html', context=context)
 
             if not isinstance(json_data, dict):
-                raise CoveInputDataError(context={
+                context = {
                     'sub_title': _("Sorry, we can't process that data"),
                     'link': 'index',
                     'link_text': _('Try Again'),
                     'msg': _('OC4IDS JSON should have an object as the top level, the JSON you supplied does not.'),
-                })
+                }
+                return render(request, 'error.html', context=context)
 
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
 
