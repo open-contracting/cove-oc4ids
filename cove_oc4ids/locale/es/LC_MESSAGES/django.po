@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Ben Webb <ben.webb@opendataservices.coop>, 2020
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
 # 
 #, fuzzy
@@ -11,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 17:39+0000\n"
+"POT-Creation-Date: 2020-10-19 17:09+0000\n"
 "PO-Revision-Date: 2020-10-06 10:51+0000\n"
 "Last-Translator: Maria Esther Cervantes <mcervantes@cds.com.py>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/113687/es/)\n"
@@ -58,6 +59,7 @@ msgid "Currencies should be published for all values."
 msgstr "Las monedas se deben publicar para todos los valores."
 
 #: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:57
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:277
 #, python-format
 msgid ""
 "%(count)s of your project <code>id</code> fields has a problem: There is no "
@@ -207,8 +209,7 @@ msgstr "Esto puede ser:"
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:119
 msgid "<strong>A JSON file</strong> - following the OC4IDS schema;"
-msgstr ""
-"<strong>Un archivo Json</strong> - siguiendo el siguiente esquema OC4IDS;"
+msgstr "<strong>Un archivo Json</strong> - siguiendo el esquema OC4IDS;"
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:120
 msgid ""
@@ -264,7 +265,7 @@ msgid ""
 "contracting.org/infrastructure/latest/en/_static/example.json\">sample "
 "data</a>."
 msgstr ""
-"Para ver como funciona la herramienta de revisión de datos, intenté subir <a"
+"Para ver como funciona la herramienta de revisión de datos, intente subir <a"
 " href=\"?source_url=http://standard.open-"
 "contracting.org/infrastructure/latest/en/_static/example.json\">datos de "
 "ejemplo</a>."
@@ -323,7 +324,7 @@ msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:27
 msgid "Failed "
-msgstr "Reprobado"
+msgstr "No aprueba"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:29
 msgid "Passed "
@@ -335,8 +336,8 @@ msgid ""
 "structural checks against <a href=\"%(schema_url)s\">OC4IDS project package "
 "schema version "
 msgstr ""
-"revisiones estructurales contra la <a href=\"%(schema_url)s\">versión del "
-"esquema del paquete del proyecto OC4IDS"
+"las revisiones estructurales contra la <a href=\"%(schema_url)s\">versión "
+"del esquema del paquete del proyecto OC4IDS"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:32
 msgid "See <a href=\"#validation-errors\">Structural Errors</a> below."
@@ -353,7 +354,7 @@ msgstr "Un vistazo"
 msgid "This file contains <strong>%(count)s project.</strong>"
 msgid_plural "This file contains <strong>%(count)s projects.</strong>"
 msgstr[0] "Este proyecto contiene <strong>%(count)sproyecto</strong>."
-msgstr[1] "Este proyecto contiene<strong>%(count)sproyecto.</strong>"
+msgstr[1] "Este proyecto contiene<strong>%(count)sproyectos.</strong>"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:43
 msgid "The schema version specified in the file is"
@@ -509,19 +510,57 @@ msgstr ""
 "href=\"https://github.com/open-contracting/infrastructure/issues/new\"> "
 "rastreador de issues OC4IDS.</a>"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:270
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:269
+msgid "Conformance (Rules)"
+msgstr "Conformidad (Reglas)"
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:274
+msgid ""
+"Fixing the following issues will improve the interoperability of your data."
+msgstr ""
+"Arreglar los siguientes issues mejorara la interoperabilidad de sus datos."
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:280
+msgid "View all errors"
+msgstr "Ver todos los errores"
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:285
+msgid "id"
+msgstr "id"
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:285
+msgid "Path"
+msgstr "Ruta"
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:294
+msgid ""
+"What is the project <code>id</code> field? A globally unique identifier for "
+"this infrastructure project. Composed of an OC4IDS prefix and an identifier "
+"for the infrastructure project. For more information see <a "
+"href=\"https://standard.open-"
+"contracting.org/infrastructure/latest/en/guidance/identifiers/#\">OC4IDS "
+"project identifier guidance</a>."
+msgstr ""
+"¿Qué es el campo <code>id</code> del proyecto? Un identificador único global"
+" para este proyecto de infraestructura. Se compone de un prefijo OC4IDS y un"
+" identificador para el proyecto de infraestructura. Para más información, "
+"vea la <a href=\"https://standard.open-"
+"contracting.org/infrastructure/latest/en/guidance/identifiers/#\">guía de "
+"identificadores de proyectos OC4IDS.</a>."
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:313
 msgid "Additional Checks"
 msgstr "Revisiones adicionales"
 
-#: cove_oc4ids/views.py:41 cove_oc4ids/views.py:52
+#: cove_oc4ids/views.py:39 cove_oc4ids/views.py:51
 msgid "Sorry, we can't process that data"
 msgstr "Lo sentimos, no podemos procesar estos datos"
 
-#: cove_oc4ids/views.py:43 cove_oc4ids/views.py:54
+#: cove_oc4ids/views.py:41 cove_oc4ids/views.py:53
 msgid "Try Again"
 msgstr "Intente de nuevo"
 
-#: cove_oc4ids/views.py:44
+#: cove_oc4ids/views.py:42
 msgid ""
 "We think you tried to upload a JSON file, but it is not well formed JSON.\n"
 "\n"
@@ -531,7 +570,7 @@ msgstr ""
 "\n"
 "<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span><strong>Mensaje de error:</strong>{}"
 
-#: cove_oc4ids/views.py:55
+#: cove_oc4ids/views.py:54
 msgid ""
 "OC4IDS JSON should have an object as the top level, the JSON you supplied "
 "does not."
