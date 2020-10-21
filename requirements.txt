@@ -21,6 +21,7 @@ django==2.2.16            # via -r requirements.in, django-bootstrap3, django-de
 et-xmlfile==1.0.1         # via openpyxl
 flattentool==0.15.0       # via -r requirements.in, libcove, libcoveoc4ids
 idna==2.10                # via requests
+importlib-metadata==1.7.0  # via django-bootstrap3, jsonschema
 jdcal==1.4.1              # via openpyxl
 json-merge-patch==0.2     # via libcove, libcoveocds, libcoveweb
 jsonref==0.2              # via flattentool, libcove, libcoveweb
@@ -50,7 +51,7 @@ strict-rfc3339==0.7       # via libcove, libcoveoc4ids, libcoveweb
 urllib3==1.25.10          # via requests, sentry-sdk
 webencodings==0.5.1       # via bleach
 xmltodict==0.12.0         # via flattentool, libcoveweb
-zipp==1.2.0               # via libcoveweb
+zipp==1.2.0               # via importlib-metadata, libcoveweb
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
