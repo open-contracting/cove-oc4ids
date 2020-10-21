@@ -27,6 +27,7 @@ flattentool==0.15.0       # via -r requirements.txt, libcove, libcoveoc4ids
 gitdb==4.0.5              # via gitpython
 gitpython==3.1.7          # via transifex-client
 idna==2.10                # via -r requirements.txt, requests
+importlib-metadata==1.7.0  # via -r requirements.txt, django-bootstrap3, flake8, jsonschema, pluggy, pytest
 iniconfig==1.0.1          # via pytest
 isort==5.4.2              # via -r requirements_dev.in
 jdcal==1.4.1              # via -r requirements.txt, openpyxl
@@ -77,7 +78,7 @@ urllib3==1.25.10          # via -r requirements.txt, requests, selenium, sentry-
 webencodings==0.5.1       # via -r requirements.txt, bleach
 werkzeug==1.0.1           # via pytest-localserver
 xmltodict==0.12.0         # via -r requirements.txt, flattentool, libcoveweb
-zipp==1.2.0               # via -r requirements.txt, libcoveweb
+zipp==1.2.0               # via -r requirements.txt, importlib-metadata, libcoveweb
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
