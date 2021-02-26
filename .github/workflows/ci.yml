@@ -28,5 +28,5 @@ jobs:
     - run: DJANGO_SETTINGS_MODULE=cove_project.settings pytest --cov cove_oc4ids --cov cove_project
       if: always()
     - env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-      run: coveralls
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: coveralls --service=github
