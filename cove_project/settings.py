@@ -20,11 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 env = environ.Env(  # set default values and casting
     DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
+    FATHOM_ANALYTICS_DOMAIN=(str, "cdn.usefathom.com"),
+    FATHOM_ANALYTICS_ID=(str, ""),
 )
 
 
 PIWIK = settings.PIWIK
 GOOGLE_ANALYTICS_ID = settings.GOOGLE_ANALYTICS_ID
+FATHOM = {
+    "domain": env("FATHOM_ANALYTICS_DOMAIN"),
+    "id": env("FATHOM_ANALYTICS_ID"),
+}
 VALIDATION_ERROR_LOCATIONS_LENGTH = settings.VALIDATION_ERROR_LOCATIONS_LENGTH
 VALIDATION_ERROR_LOCATIONS_SAMPLE = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
 
@@ -74,6 +80,9 @@ MIDDLEWARE = (
 ROOT_URLCONF = 'cove_project.urls'
 
 TEMPLATES = settings.TEMPLATES
+TEMPLATES[0]["OPTIONS"]["context_processors"].append(
+    "cove_project.context_processors.from_settings",
+)
 
 WSGI_APPLICATION = 'cove_project.wsgi.application'
 
