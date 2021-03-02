@@ -1,5 +1,7 @@
 dealer
 Django>2.2<2.3
+django-bootstrap3
+django-environ
 libcoveoc4ids>=0.3.1
 libcove>=0.20.0
 libcoveweb>=0.18.2
