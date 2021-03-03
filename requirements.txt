@@ -34,11 +34,15 @@ dealer==2.1.0
 defusedxml==0.6.0
     # via odfpy
 django-bootstrap3==14.1.0
-    # via libcoveweb
+    # via
+    #   -r requirements.in
+    #   libcoveweb
 django-debug-toolbar==2.2
     # via libcoveweb
 django-environ==0.4.5
-    # via libcoveweb
+    # via
+    #   -r requirements.in
+    #   libcoveweb
 django==2.2.16
     # via
     #   -r requirements.in
@@ -51,7 +55,6 @@ et-xmlfile==1.0.1
     # via openpyxl
 flattentool==0.15.0
     # via
-    #   -r requirements.in
     #   libcove
     #   libcoveoc4ids
 idna==2.10
