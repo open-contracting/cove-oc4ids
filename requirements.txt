@@ -6,7 +6,7 @@
 #
 attrs==20.1.0
     # via jsonschema
-bleach==3.1.5
+bleach==3.3.0
     # via libcoveocds
 cached-property==1.5.1
     # via
