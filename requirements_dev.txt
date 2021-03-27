@@ -68,7 +68,7 @@ django-environ==0.4.5
     # via
     #   -r requirements.txt
     #   libcoveweb
-django==2.2.16
+django==2.2.19
     # via
     #   -r requirements.txt
     #   django-bootstrap3
@@ -150,7 +150,7 @@ libcoveweb==0.18.2
     # via -r requirements.txt
 libsass==0.20.1
     # via -r requirements_dev.in
-lxml==4.6.2
+lxml==4.6.3
     # via
     #   -r requirements.txt
     #   flattentool
