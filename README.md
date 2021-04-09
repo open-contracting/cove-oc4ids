@@ -10,28 +10,36 @@ In non-dev or (not DEBUG mode) the default settings make use of a local memcache
 
 ## Dev installation
 
-    git clone https://github.com/open-contracting/cove-oc4ids.git
-    cd cove-oc4ids
-    virtualenv .ve --python=/usr/bin/python3
-    source .ve/bin/activate
-    pip install -r requirements_dev.txt
-    python manage.py migrate
-    python manage.py compilemessages
-    python manage.py runserver
+```bash
+git clone https://github.com/open-contracting/cove-oc4ids.git
+cd cove-oc4ids
+virtualenv .ve --python=/usr/bin/python3
+source .ve/bin/activate
+pip install -r requirements_dev.txt
+python manage.py migrate
+python manage.py compilemessages
+python manage.py runserver
+```
 
 You may need to pass `0.0.0.0:8000` to `runserver` in the last step, depending on your development environment.
 
 Note: requires `gettext` to be installed. This should come by default with Ubuntu, but just in case:
 
-```
+```bash
 apt-get update && apt-get install gettext
+```
+
+## Building the stylesheets
+
+```bash
+pysassc -t compressed -I bootstrap cove_ocds/sass/styles-oc4ids.sass cove_ocds/static/dataexplore/css/bootstrap-oc4ids.css
 ```
 
 ## Running the tests
 
 [Set up chromedriver](https://chromedriver.chromium.org/getting-started), then run:
 
-```
+```bash
 DJANGO_SETTINGS_MODULE=cove_project.settings pytest
 ```
 
@@ -56,23 +64,31 @@ First check the `Transifex lock <https://opendataservices.plan.io/projects/co-op
 
 Then:
 
-    python manage.py makemessages -l en
-    tx push -s
+```bash
+python manage.py makemessages -l en
+tx push -s
+```
 
 In order to fetch messages from transifex:
 
-    tx pull -a
+```bash
+tx pull -a
+```
 
 In order to compile them:
 
-    python manage.py compilemessages
+```bash
+python manage.py compilemessages
+```
 
 Keep the makemessages and pull messages steps in thier own commits seperate from the text changes.
 
 To check that all new text is written so that it is able to be translated you could install and run `django-template-i18n-lint`
 
-    pip install django-template-i18n-lint
-    django-template-i18n-lint cove
+```bash
+pip install django-template-i18n-lint
+django-template-i18n-lint cove
+```
 
 ## Command-line interface
 
