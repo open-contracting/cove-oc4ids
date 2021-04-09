@@ -68,7 +68,7 @@ django-environ==0.4.5
     # via
     #   -r requirements.txt
     #   libcoveweb
-django==2.2.19
+django==2.2.20
     # via
     #   -r requirements.txt
     #   django-bootstrap3
