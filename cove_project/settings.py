@@ -40,7 +40,6 @@ VALIDATION_ERROR_LOCATIONS_SAMPLE = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/infrastructure/media/'
 
-DEALER_TYPE = settings.DEALER_TYPE
 SECRET_KEY = settings.SECRET_KEY
 DEBUG = settings.DEBUG
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
@@ -71,7 +70,6 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'dealer.contrib.django.Middleware',
     'cove.middleware.CoveConfigCurrentApp',
     'django.middleware.cache.FetchFromCacheMiddleware',
 )
@@ -159,9 +157,6 @@ COVE_CONFIG = {
     'support_email': 'data@open-contracting.org',
 }
 
-# https://github.com/OpenDataServices/cove/issues/1098
-FILE_UPLOAD_PERMISSIONS = 0o644
-
 URL_PREFIX = r'infrastructure/review/'
 
 # Because of how the standard site proxies traffic, we want to use this
@@ -176,7 +171,7 @@ SESSION_COOKIE_NAME = 'oc4idssessionid'
 if not DEBUG:
     CACHES = {
         'default': {
-            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
             'LOCATION': '127.0.0.1:11211',
             'OPTIONS': {
                 'server_max_value_length': 1024 * 1024 * 2,

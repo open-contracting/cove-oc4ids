@@ -5,7 +5,7 @@ from decimal import Decimal
 from cove.views import cove_web_input_error, explore_data_context
 from django.shortcuts import render
 from django.utils.html import format_html
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from libcove.lib.converters import convert_spreadsheet
 from libcoveoc4ids.common_checks import common_checks_oc4ids
 from libcoveoc4ids.config import LibCoveOC4IDSConfig
