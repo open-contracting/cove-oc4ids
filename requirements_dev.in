@@ -1,12 +1,12 @@
 -r requirements.txt
-pip-tools
 coveralls
+flake8
+isort
+libsass
+pip-tools
 pytest
 pytest-cov
 pytest-django
-flake8
 pytest-localserver
 selenium
 transifex-client
-libsass
-isort
