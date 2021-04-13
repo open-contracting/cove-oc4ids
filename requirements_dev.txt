@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements_dev.in
 #
+-e git+https://github.com/jpmckinney/lib-cove-web.git@django32#egg=libcoveweb
+    # via -r requirements.txt
 attrs==20.1.0
     # via
     #   -r requirements.txt
@@ -109,10 +111,6 @@ iniconfig==1.0.1
     # via pytest
 isort==5.4.2
     # via -r requirements_dev.in
-jdcal==1.4.1
-    # via
-    #   -r requirements.txt
-    #   openpyxl
 json-merge-patch==0.2
     # via
     #   -r requirements.txt
@@ -130,10 +128,6 @@ jsonschema==3.2.0
     #   -r requirements.txt
     #   libcove
     #   libcoveweb
-lepl==5.1.3
-    # via
-    #   -r requirements.txt
-    #   rfc6266
 libcove==0.20.0
     # via
     #   -r requirements.txt
@@ -146,8 +140,6 @@ libcoveocds==0.9.1
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
-libcoveweb==0.18.2
-    # via -r requirements.txt
 libsass==0.20.1
     # via -r requirements_dev.in
 lxml==4.6.3
@@ -162,11 +154,10 @@ odfpy==1.4.1
     # via
     #   -r requirements.txt
     #   flattentool
-openpyxl==2.6.4
+openpyxl==3.0.7
     # via
     #   -r requirements.txt
     #   flattentool
-    #   libcoveweb
 packaging==20.4
     # via
     #   -r requirements.txt
@@ -182,6 +173,8 @@ pycodestyle==2.6.0
     # via flake8
 pyflakes==2.2.0
     # via flake8
+pymemcache==3.4.1
+    # via -r requirements.txt
 pyparsing==2.4.7
     # via
     #   -r requirements.txt
@@ -205,8 +198,6 @@ python-dateutil==2.8.1
     # via
     #   -r requirements.txt
     #   libcoveweb
-python-memcached==1.59
-    # via -r requirements.txt
 python-slugify==4.0.1
     # via transifex-client
 pytz==2020.1
@@ -228,10 +219,6 @@ rfc3987==1.3.8
     #   libcove
     #   libcoveoc4ids
     #   libcoveweb
-rfc6266==0.0.4
-    # via
-    #   -r requirements.txt
-    #   libcoveweb
 schema==0.7.2
     # via
     #   -r requirements.txt
@@ -249,9 +236,9 @@ six==1.15.0
     #   jsonschema
     #   libsass
     #   packaging
+    #   pymemcache
     #   pyrsistent
     #   python-dateutil
-    #   python-memcached
     #   transifex-client
 smmap==3.0.4
     # via gitdb
@@ -272,6 +259,10 @@ toml==0.10.1
     # via pytest
 transifex-client==0.13.11
     # via -r requirements_dev.in
+uc-rfc6266-parser==0.1.0
+    # via
+    #   -r requirements.txt
+    #   libcoveweb
 urllib3==1.25.10
     # via
     #   -r requirements.txt
@@ -284,7 +275,10 @@ webencodings==0.5.1
     #   -r requirements.txt
     #   bleach
 werkzeug==1.0.1
-    # via pytest-localserver
+    # via
+    #   -r requirements.txt
+    #   pytest-localserver
+    #   uc-rfc6266-parser
 xmltodict==0.12.0
     # via
     #   -r requirements.txt
