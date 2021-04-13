@@ -111,10 +111,6 @@ iniconfig==1.0.1
     # via pytest
 isort==5.4.2
     # via -r requirements_dev.in
-jdcal==1.4.1
-    # via
-    #   -r requirements.txt
-    #   openpyxl
 json-merge-patch==0.2
     # via
     #   -r requirements.txt
@@ -158,11 +154,10 @@ odfpy==1.4.1
     # via
     #   -r requirements.txt
     #   flattentool
-openpyxl==2.6.4
+openpyxl==3.0.7
     # via
     #   -r requirements.txt
     #   flattentool
-    #   libcoveweb
 packaging==20.4
     # via
     #   -r requirements.txt
