@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.conf.urls import include, url
+from django.conf.urls import include, re_path
 from django.conf.urls.static import static
 from django.http import HttpResponseServerError
 from django.template import loader
@@ -10,12 +10,12 @@ from cove_oc4ids.views import explore_oc4ids
 urlpatterns = [
     # Allow cove to respond on both the root url and a prefixed
     # one
-    url(r'^$', RedirectView.as_view(pattern_name='index',
-                                    permanent=False)),
+    re_path(r'^$', RedirectView.as_view(pattern_name='index',
+                                        permanent=False)),
 
-    url(settings.URL_PREFIX, include('cove.urls')),
-    url(settings.URL_PREFIX + 'data/(.+)$', explore_oc4ids,
-        name='explore'),
+    re_path(settings.URL_PREFIX, include('cove.urls')),
+    re_path(settings.URL_PREFIX + 'data/(.+)$', explore_oc4ids,
+            name='explore'),
 ]
 
 # Add static media urls so that the inbuilt dev server can serve them
