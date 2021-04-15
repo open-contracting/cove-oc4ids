@@ -4,8 +4,6 @@
 #
 #    pip-compile requirements_dev.in
 #
--e git+https://github.com/jpmckinney/lib-cove-web.git@django32#egg=libcoveweb
-    # via -r requirements.txt
 attrs==20.1.0
     # via
     #   -r requirements.txt
@@ -140,6 +138,8 @@ libcoveocds==0.9.1
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
+libcoveweb==0.22.0
+    # via -r requirements.txt
 libsass==0.20.1
     # via -r requirements_dev.in
 lxml==4.6.3
