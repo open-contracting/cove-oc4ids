@@ -24,9 +24,10 @@ env = environ.Env(  # set default values and casting
     FATHOM_ANALYTICS_ID=(str, ""),
 )
 
-
+# Remove after https://github.com/OpenDataServices/lib-cove-web/issues/93
 PIWIK = settings.PIWIK
 GOOGLE_ANALYTICS_ID = settings.GOOGLE_ANALYTICS_ID
+
 FATHOM = {
     "domain": env("FATHOM_ANALYTICS_DOMAIN"),
     "id": env("FATHOM_ANALYTICS_ID"),
