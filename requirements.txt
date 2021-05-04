@@ -4,6 +4,8 @@
 #
 #    pip-compile
 #
+asgiref==3.3.4
+    # via django
 attrs==20.1.0
     # via jsonschema
 bleach==3.3.0
@@ -11,7 +13,6 @@ bleach==3.3.0
 cached-property==1.5.1
     # via
     #   libcove
-    #   libcoveocds
     #   libcoveweb
 certifi==2020.6.20
     # via
@@ -41,20 +42,17 @@ django-environ==0.4.5
     # via
     #   -r requirements.in
     #   libcoveweb
-django==2.2.21
+django==3.2.1
     # via
     #   -r requirements.in
     #   django-bootstrap3
     #   django-debug-toolbar
-    #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
 et-xmlfile==1.0.1
     # via openpyxl
 flattentool==0.15.0
-    # via
-    #   libcove
-    #   libcoveoc4ids
+    # via libcove
 idna==2.10
     # via requests
 importlib-metadata==1.7.0
@@ -74,16 +72,17 @@ jsonref==0.2
 jsonschema==3.2.0
     # via
     #   libcove
+    #   libcoveocds
     #   libcoveweb
-libcove==0.20.0
+libcove==0.22.1
     # via
     #   -r requirements.in
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids==0.3.1
+libcoveoc4ids==0.3.2
     # via -r requirements.in
-libcoveocds==0.9.1
+libcoveocds==0.10.1
     # via libcoveoc4ids
 libcoveweb==0.22.0
     # via -r requirements.in
@@ -115,7 +114,6 @@ requests==2.24.0
 rfc3987==1.3.8
     # via
     #   libcove
-    #   libcoveoc4ids
     #   libcoveweb
 schema==0.7.2
     # via flattentool
@@ -136,8 +134,9 @@ sqlparse==0.3.1
 strict-rfc3339==0.7
     # via
     #   libcove
-    #   libcoveoc4ids
     #   libcoveweb
+typing-extensions==3.10.0.0
+    # via asgiref
 uc-rfc6266-parser==0.1.0
     # via libcoveweb
 urllib3==1.25.10
