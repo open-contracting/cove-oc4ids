@@ -139,7 +139,7 @@ typing-extensions==3.10.0.0
     # via asgiref
 uc-rfc6266-parser==0.1.0
     # via libcoveweb
-urllib3==1.25.10
+urllib3==1.25.11
     # via
     #   requests
     #   sentry-sdk
