@@ -106,7 +106,7 @@ pytz==2020.1
     # via
     #   django
     #   flattentool
-requests==2.24.0
+requests==2.25.1
     # via
     #   libcove
     #   libcoveocds
@@ -139,7 +139,7 @@ typing-extensions==3.10.0.0
     # via asgiref
 uc-rfc6266-parser==0.1.0
     # via libcoveweb
-urllib3==1.25.11
+urllib3==1.26.5
     # via
     #   requests
     #   sentry-sdk

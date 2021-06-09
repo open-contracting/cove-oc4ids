@@ -207,7 +207,7 @@ pytz==2020.1
     #   -r requirements.txt
     #   django
     #   flattentool
-requests==2.24.0
+requests==2.25.1
     # via
     #   -r requirements.txt
     #   coveralls
@@ -267,7 +267,7 @@ uc-rfc6266-parser==0.1.0
     # via
     #   -r requirements.txt
     #   libcoveweb
-urllib3==1.25.11
+urllib3==1.26.5
     # via
     #   -r requirements.txt
     #   requests
