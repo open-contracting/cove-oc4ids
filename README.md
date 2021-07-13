@@ -2,7 +2,7 @@
 
 ### Caching
 
-In non-dev or (not DEBUG mode) the default settings make use of a local memcached server. This backend requires a local memcached server running. On debian based systems this can be installed with `apt install memcached`.
+In non-dev or (not DEBUG mode) the default settings make use of a local memcached server. This backend requires a local memcached server running. On debian based systems this can be installed with `sudo apt install memcached`.
 
 ## Dev installation
 
@@ -22,7 +22,8 @@ You may need to pass `0.0.0.0:8000` to `runserver` in the last step, depending o
 Note: requires `gettext` to be installed. This should come by default with Ubuntu, but just in case:
 
 ```bash
-apt-get update && apt-get install gettext
+sudo apt update
+sudo apt install gettext
 ```
 
 ## Building the stylesheets
