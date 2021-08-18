@@ -5,3 +5,4 @@ libcove
 libcoveoc4ids
 libcoveweb
 pymemcache
+sentry-sdk

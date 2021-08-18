@@ -22,7 +22,23 @@ env = environ.Env(  # set default values and casting
     DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
     FATHOM_ANALYTICS_DOMAIN=(str, "cdn.usefathom.com"),
     FATHOM_ANALYTICS_ID=(str, ""),
+    SENTRY_DSN=(str, ''),
 )
+
+# We use the setting to choose whether to show the section about Sentry in the
+# terms and conditions
+SENTRY_DSN = env('SENTRY_DSN')
+
+if SENTRY_DSN:
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
+    from sentry_sdk.integrations.logging import ignore_logger
+
+    ignore_logger('django.security.DisallowedHost')
+    sentry_sdk.init(
+        dsn=env('SENTRY_DSN'),
+        integrations=[DjangoIntegration()]
+    )
 
 # Remove after https://github.com/OpenDataServices/lib-cove-web/issues/93
 PIWIK = settings.PIWIK
