@@ -12,7 +12,7 @@ attrs==21.2.0
     #   markdown-it-py
 backports-datetime-fromisoformat==1.0.0
     # via flattentool
-bleach==4.0.0
+bleach==4.1.0
     # via libcoveocds
 btrees==4.9.2
     # via zodb
@@ -32,7 +32,7 @@ contextlib2==21.6.0
     # via schema
 defusedxml==0.7.1
     # via odfpy
-django==3.2.6
+django==3.2.7
     # via
     #   -r requirements.in
     #   django-bootstrap3
@@ -42,7 +42,7 @@ django-bootstrap3==15.0.0
     # via
     #   -r requirements.in
     #   libcoveweb
-django-environ==0.4.5
+django-environ==0.6.0
     # via
     #   -r requirements.in
     #   libcoveweb
@@ -132,7 +132,7 @@ strict-rfc3339==0.7
     # via libcove
 transaction==3.0.1
     # via zodb
-typing-extensions==3.10.0.0
+typing-extensions==3.10.0.2
     # via
     #   asgiref
     #   markdown-it-py
