@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-19 17:09+0000\n"
+"POT-Creation-Date: 2021-08-23 15:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "Currencies should be published for all values."
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:57
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:277
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:291
 #, python-format
 msgid ""
 "%(count)s of your project <code>id</code> fields has a problem: There is no "
@@ -75,44 +75,44 @@ msgid ""
 "<code>parties</code> array with a matching <code>id</code>."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:25
+#: cove_oc4ids/templates/cove_oc4ids/base.html:26
 msgid "Open Contracting for Infrastructure Data Standard"
 msgstr ""
 
 #. Translators: Label of a button that triggers search
-#: cove_oc4ids/templates/cove_oc4ids/base.html:44
+#: cove_oc4ids/templates/cove_oc4ids/base.html:45
 msgid "Go"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:51
+#: cove_oc4ids/templates/cove_oc4ids/base.html:52
 msgid " Data Review Tool"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:51
+#: cove_oc4ids/templates/cove_oc4ids/base.html:52
 msgid "beta"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:54
+#: cove_oc4ids/templates/cove_oc4ids/base.html:55
 msgid " OC4IDS Documentation "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:77
+#: cove_oc4ids/templates/cove_oc4ids/base.html:78
 msgid "Open Contracting Partnership"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:78
+#: cove_oc4ids/templates/cove_oc4ids/base.html:79
 msgid "CoST - Infrastructure Transparency Initiative"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:79
+#: cove_oc4ids/templates/cove_oc4ids/base.html:80
 msgid "Open Contracting for Infrastructure Data Standards Toolkit"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:88
+#: cove_oc4ids/templates/cove_oc4ids/base.html:89
 msgid "About OC4IDS"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:89
+#: cove_oc4ids/templates/cove_oc4ids/base.html:90
 msgid ""
 "The <a href=\"https://standard.open-contracting.org/infrastructure/\">Open "
 "Contracting for Infrastructure Data Standard</a> (OC4IDS) describes how to "
@@ -122,7 +122,7 @@ msgid ""
 "infrastructure projects."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:91
+#: cove_oc4ids/templates/cove_oc4ids/base.html:92
 #, python-format
 msgid ""
 "Trillions of dollars are spent every year on infrastructure and estimates "
@@ -132,183 +132,185 @@ msgid ""
 "accessible infrastructure for government, citizens and business."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:97
+#: cove_oc4ids/templates/cove_oc4ids/base.html:98
 msgid "Check and review"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:98
+#: cove_oc4ids/templates/cove_oc4ids/base.html:99
 msgid "This tool helps you to:"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:100
+#: cove_oc4ids/templates/cove_oc4ids/base.html:101
 msgid "Check that your OC4IDS data complies with the schema"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:101
+#: cove_oc4ids/templates/cove_oc4ids/base.html:102
 msgid "Inspect key contents of your data to review data quality"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:102
+#: cove_oc4ids/templates/cove_oc4ids/base.html:103
 msgid ""
-"Access your data in different formats (spreadsheet and JSON) to support "
-"further review."
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:116
-msgid "Using the Data Review Tool"
+"Explore your data's coverage of OC4IDS fields to identify possible additions"
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:117
+msgid "Using the Data Review Tool"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/base.html:118
 msgid ""
 "You can upload, paste or provide a link to data published using the <a href="
 "\"https://standard.open-contracting.org/infrastructure/\">Open Contracting "
 "for Infrastructure Data Standard</a>"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:117
+#: cove_oc4ids/templates/cove_oc4ids/base.html:118
 msgid " This can be:"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:119
+#: cove_oc4ids/templates/cove_oc4ids/base.html:120
 msgid "<strong>A JSON file</strong> - following the OC4IDS schema;"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:120
+#: cove_oc4ids/templates/cove_oc4ids/base.html:121
 msgid ""
 "<strong>A CSV file or Excel Spreadsheet</strong> - using a flattened "
 "serialization of OC4IDS;"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:122
+#: cove_oc4ids/templates/cove_oc4ids/base.html:123
 msgid ""
 "Supported encodings are UTF-8 for JSON and UTF-8, Windows-1252 and "
 "ISO-8859-1 for CSV."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:124
 msgid ""
 "The application works with data provided in an <a href=\"http://standard."
 "open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
 "project package</a>."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:124
+#: cove_oc4ids/templates/cove_oc4ids/base.html:125
 msgid ""
 "If your data passes basic structural checks, the tool will then present a "
-"report on data quality, and information about the contents of your file. It "
-"will also offer alternative copies of the data for download."
+"report on data quality, and information about the contents of your file. "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:125
+#: cove_oc4ids/templates/cove_oc4ids/base.html:126
 msgid ""
 "Data is stored for 7 days at a randomly generated URL. You can share this "
 "link with others to support discussion of data quality."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:126
+#: cove_oc4ids/templates/cove_oc4ids/base.html:127
 msgid ""
 "To preview how the data review tool works, try loading some <a href=\"?"
 "source_url=http://standard.open-contracting.org/infrastructure/latest/en/"
 "_static/example.json\">sample data</a>."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:138
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "Built by"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:138
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "Open Data Services"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+#: cove_oc4ids/templates/cove_oc4ids/base.html:137
 msgid "The code for this site is available on"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+#: cove_oc4ids/templates/cove_oc4ids/base.html:137
 msgid "GitHub"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+#: cove_oc4ids/templates/cove_oc4ids/base.html:137
 msgid "Licence"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+#: cove_oc4ids/templates/cove_oc4ids/base.html:137
 msgid "AGPLv3"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+#: cove_oc4ids/templates/cove_oc4ids/base.html:137
 msgid "Report/View issues"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:139
+#: cove_oc4ids/templates/cove_oc4ids/base.html:137
 msgid "cove-oc4ids issues"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:144
-msgid "Running version "
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:6
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:8
 msgid "Load New File"
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:18
+msgid "Structure & Format"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:19
+msgid "Field Coverage"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:32
 msgid "Headlines"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:23
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:37
 msgid ""
 "Please read the <a href=\"#conversion-warning\">conversion warnings</a> "
 "below."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:27
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:41
 msgid "Failed "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:29
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:43
 msgid "Passed "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:31
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:45
 #, python-format
 msgid ""
 "structural checks against <a href=\"%(schema_url)s\">OC4IDS project package "
 "schema version "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:32
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:46
 msgid "See <a href=\"#validation-errors\">Structural Errors</a> below."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:36
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:50
 msgid "At a glance"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:39
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:53
 #, python-format
 msgid "This file contains <strong>%(count)s project.</strong>"
 msgid_plural "This file contains <strong>%(count)s projects.</strong>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:43
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:57
 msgid "The schema version specified in the file is"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:49
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:63
 msgid "The publisher named in the file is"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:55
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:69
 msgid "The license is"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:62
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:76
 msgid "Publication policy is"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:70
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:84
 #, python-format
 msgid ""
 "There is %(count)s <a href=\"#key-field-info\">duplicate release ID</a> in "
@@ -319,7 +321,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:76
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:90
 #, python-format
 msgid ""
 "This file uses %(count)s <a href=\"#additional-fields\">additional field</a> "
@@ -330,79 +332,79 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:81
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:95
 msgid "This file is not 'utf-8' encoded (it is"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:81
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:95
 msgid "encoded)."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:85
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:99
 msgid "Data "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:87
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:101
 msgid "downloaded from "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:89
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:103
 msgid "uploaded "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:91
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:105
 msgid "on "
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:107
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:121
 msgid "Download Data"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:111
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:125
 msgid "Alternative formats for reviewing your data"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:114
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:128
 msgid ""
 "Conversion of your (JSON) data into a spreadsheet format. The results can be "
 "seen below"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:126
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:140
 msgid "The JSON could not be converted to Spreadsheet due to the error:"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:132
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:146
 msgid "Conversion of your data into JSON format. The results can be seen below"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:158
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:172
 msgid "Convert to Spreadsheet"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:186
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:197
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:200
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:211
 msgid "Structural Errors"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:201
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:215
 msgid "There were no structural errors"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:216
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:227
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:230
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:241
 msgid "Additional Fields"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:231
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:245
 msgid "There were no additional fields"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:246
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:260
 msgid "Additional Codelist Values"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:250
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:264
 msgid ""
 "Your data contains a number of fields that use an open codelist. You should "
 "use values from the codelist whenever possible, but if the codelist does not "
@@ -411,7 +413,7 @@ msgid ""
 "intended these as additional values."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:256
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:270
 msgid ""
 "Make sure you list the definition of any additional codelist values you "
 "include within your <a href=\"http://standard.open-contracting.org/latest/en/"
@@ -421,28 +423,28 @@ msgid ""
 "infrastructure/issues/new\">OC4IDS issue tracker.</a>"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:269
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:283
 msgid "Conformance (Rules)"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:274
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:288
 msgid ""
 "Fixing the following issues will improve the interoperability of your data."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:280
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:294
 msgid "View all errors"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:285
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:299
 msgid "id"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:285
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:299
 msgid "Path"
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:294
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:308
 msgid ""
 "What is the project <code>id</code> field? A globally unique identifier for "
 "this infrastructure project. Composed of an OC4IDS prefix and an identifier "
@@ -451,8 +453,69 @@ msgid ""
 "\">OC4IDS project identifier guidance</a>."
 msgstr ""
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:313
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:327
 msgid "Additional Checks"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:343
+msgid ""
+"This coverage report details which OC4IDS fields are populated in your data."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:345
+msgid ""
+"If a field is on an object in an array, then coverage is reported for each "
+"object in the array. For example, in a data file with 100 projects, all of "
+"which have 5 parties, the coverage for the <code>parties</code>field will be "
+"calculated out of 100, but coverage for its child fields (like <code>parties."
+"id</code>) will be calculated out of 500."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:347
+msgid ""
+"Child fields are reported in the context of their parent field. For example, "
+"in a data file with 100 projects, 10 of which set <code>publicAuthority</"
+"code>, coverage for the <code>publicAuthority</code> field will be "
+"calculated out of 100, but coverage for its child fields (like "
+"<code>publicAuthority.id</code>) will be calculated out of 10."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:349
+#, python-format
+msgid ""
+"It's not expected for all fields to be used (e.g. the source system might "
+"not have the data available), or for all fields to be 100%% (e.g. a new "
+"project will be less complete than a finished project)."
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:369
+msgid "Search by field name"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:373
+msgid "All"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:374
+msgid "Coverage Passed Only"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:375
+msgid "Coverage Failed Only"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:385
+msgid "Field Path"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:390
+msgid "Coverage"
+msgstr ""
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:400
+msgid ""
+"Expand an object to check the coverage of its fields, which may be less than "
+"the object's coverage."
 msgstr ""
 
 #: cove_oc4ids/views.py:39 cove_oc4ids/views.py:51

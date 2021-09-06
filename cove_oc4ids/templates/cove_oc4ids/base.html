@@ -71,7 +71,7 @@
 
 {% block bootstrap_css %}
   <link rel="stylesheet" type="text/css" href="{% static 'dataexplore/fonts/tick/tick.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'dataexplore/css/bootstrap-oc4ids.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'dataexplore/css/bootstrap-oc4ids.css' %}?v=1">
 {% endblock %}
 
 {% block link %}
@@ -100,7 +100,7 @@
 			<ul>
         <li>{% blocktrans %}Check that your OC4IDS data complies with the schema{% endblocktrans %}</li>
         <li>{% blocktrans %}Inspect key contents of your data to review data quality{% endblocktrans %}</li>
-				<li>{% blocktrans %}Access your data in different formats (spreadsheet and JSON) to support further review.{% endblocktrans %}</li>
+				<li>{% blocktrans %}Explore your data's coverage of OC4IDS fields to identify possible additions{% endblocktrans %}</li>
 			</ul>
 		</div>
 	</div>
@@ -122,7 +122,7 @@
 				</ul>
 				<p>{% blocktrans %}Supported encodings are UTF-8 for JSON and UTF-8, Windows-1252 and ISO-8859-1 for CSV.{% endblocktrans %}</p>
 				<p>{% blocktrans %}The application works with data provided in an <a href="http://standard.open-contracting.org/infrastructure/latest/en/reference/package/">OC4IDS project package</a>.{% endblocktrans %}</p>
-				<p>{% blocktrans %}If your data passes basic structural checks, the tool will then present a report on data quality, and information about the contents of your file. It will also offer alternative copies of the data for download.{% endblocktrans %}</p>
+				<p>{% blocktrans %}If your data passes basic structural checks, the tool will then present a report on data quality, and information about the contents of your file. {% endblocktrans %}</p>
 				<p>{% blocktrans %}Data is stored for 7 days at a randomly generated URL. You can share this link with others to support discussion of data quality.{% endblocktrans %}</p>
 				<p>{% blocktrans %}To preview how the data review tool works, try loading some <a href="?source_url=http://standard.open-contracting.org/infrastructure/latest/en/_static/example.json">sample data</a>.{% endblocktrans %}</p>
 

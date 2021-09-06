@@ -1,18 +1,32 @@
 {% extends 'explore.html' %}
 {% load i18n %}
 {% load cove_tags %}
+{% load static %}
+
 {% block header_button %}
-  <div class="row">
+  <div>
     <a href="{% url 'index' %}" class="btn btn-large btn-success">{% trans 'Load New File' %}</a>
   </div>
 {% endblock %}
 
 {% block explore_content %}
 
+<!-- Nav tabs -->
+
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#structure-format" aria-controls="structure-format" role="tab" data-toggle="tab">{% blocktrans %}Structure & Format{% endblocktrans %}</a></li>
+    <li role="presentation"><a href="#field-coverage" aria-controls="field-coverage" role="tab" data-toggle="tab">{% blocktrans %}Field Coverage{% endblocktrans %}</a></li>
+  </ul>
+</div>
+
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="structure-format">
+
 {% block key_facts %} {# Headlines area #}
 {% with releases_aggregates as ra %}
 
-  <div class="row">
+  <div>
     <div class="panel panel-primary">
       <div class="panel-heading">
         <h4 class="panel-title">{% trans 'Headlines' %}</h4>
@@ -99,7 +113,7 @@
   {% endblock %}
 
 
-    <div class="row">
+    <div>
 
             <div class="panel panel-success">
                 <div id="download-panel" class="panel-heading pointer" role="region" aria-expanded="true" aria-controls="downloadData" data-toggle="collapse" data-target="#downloadData">
@@ -168,7 +182,7 @@
               </div>
     </div>
 
-    <div class="row">
+    <div>
 
 
         {% if validation_errors %}
@@ -205,7 +219,7 @@
 
     </div>
 
-    <div class="row">
+    <div>
 
         {% if additional_fields_count %}
 
@@ -236,7 +250,7 @@
     </div>
 
     {% if additional_open_codelist_values %}
-    <div class="row">
+    <div>
       <a name="additional-open-codelist-values" class="anchor"></a>
       <div class="panel panel-warning">
         <div id="additional-open-codelist-values-panel" class="panel-heading pointer" role="region" aria-expanded="true"
@@ -260,7 +274,7 @@
     {% endif %}
 
     {% if conformance_checks %}
-     <div class="row">
+     <div>
      {% for check in conformance_checks %}
        <a name="conformance-rules" class="anchor"></a>
        <div class="panel panel-danger">
@@ -304,7 +318,7 @@
     {% endif %}
 
     {% if additional_checks %}
-    <div class="row">
+    <div>
 
       <a name="additional_checks" class="anchor"></a>
       <div class="panel panel-warning">
@@ -320,11 +334,153 @@
 
     </div>
     {% endif %}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="field-coverage">
+    
+    <div>
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <p>{% blocktrans %}This coverage report details which OC4IDS fields are populated in your data.{% endblocktrans %}</p>
+
+          <p>{% blocktrans %}If a field is on an object in an array, then coverage is reported for each object in the array. For example, in a data file with 100 projects, all of which have 5 parties, the coverage for the <code>parties</code>field will be calculated out of 100, but coverage for its child fields (like <code>parties.id</code>) will be calculated out of 500.{% endblocktrans %}</p>
+
+          <p>{% blocktrans %}Child fields are reported in the context of their parent field. For example, in a data file with 100 projects, 10 of which set <code>publicAuthority</code>, coverage for the <code>publicAuthority</code> field will be calculated out of 100, but coverage for its child fields (like <code>publicAuthority.id</code>) will be calculated out of 10.{% endblocktrans %}</p>
+
+          <p>{% blocktrans %}It's not expected for all fields to be used (e.g. the source system might not have the data available), or for all fields to be 100% (e.g. a new project will be less complete than a finished project).{% endblocktrans %}</p>
+        </div>
+      </div>
+    </div>
+    <div id="coverage-report"></div>
+  </div>
+</div>
 
 {% endblock explore_content %}
+
+{% block extrafooterscript %}
+
+<script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue-fragment@1.5.2/dist/vue-fragment.min.js"></script>
+{{ field_coverage|json_script:"field_coverage_json" }}
+
+<script type="text/x-template" id="coverage-template">
+  <div>
+    <div class="row">
+      <div class="col-xs-6">
+        <input v-model="search" type="text" class="form-control ml-14" placeholder="{% trans 'Search by field name'%}">
+      </div>
+      <div class="col-xs-3 col-xs-offset-3">
+        <select v-model="filter" class="form-control pull-right mr-14">
+          <option value="all">{% trans 'All' %}</option>
+          <option value="complete">{% trans 'Coverage Passed Only' %}</option>
+          <option value="incomplete">{% trans 'Coverage Failed Only' %}</option>
+        </select>
+      </div>
+    </div>
+    <br>
+
+    <ul class="list-group coverage-heading">
+      <li class="list-group-item coverage-item ">      
+        <div class="row">
+          <div class="col-xs-7">
+            <h5 class="pl-14"><b>{% trans 'Field Path' %}</b></h5>
+          </div>
+
+
+          <div class="col-xs-5">
+            <h5><b>{% trans 'Coverage' %}</b></h5>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item coverage-item background-info">      
+        <div class="row">
+          <div class="col-xs-12">
+            {% blocktrans %}Expand an object to check the coverage of its fields, which may be less than the object's coverage.{% endblocktrans %}
+          </div>
+        </div>
+      </li>
+      <tree-item
+        class="item"
+        v-for="(properties, key) in schemaData"
+        :key="key"
+        :name="key"
+        :path="[key]"
+        :search="search"
+        :filter="filter"
+        :properties="properties"
+        :open="true"
+        :depth="0"
+      ></tree-item>
+    </ul>
+  </div>
+</script>
+
+{% verbatim %}
+
+<script type="text/x-template" id="item-template">
+  <fragment>
+    <li class="list-group-item coverage-item "
+      v-show="show && open"
+      @click="toggle"
+      :style="{cursor: properties.allowOpen ? 'pointer' : 'auto'}"
+    >
+      <div class="row">
+        <div class="col-xs-4">
+          <div :class="'coverage-depth-' + depth">
+            <span 
+              :style="{visibility: properties.allowOpen ? 'visible' : 'hidden'}"
+              :class="'glyphicon glyphicon-menu-' + (properties.isOpen ? 'down' : 'right') "
+            ></span>
+
+            <b><span :title="properties.title" v-html="highlight(name)"></span></b>
+          </div>
+        </div>
+
+        <div class="col-xs-2" v-if="showStats">
+          <span class="pull-right">
+            <b><span> {{properties.coverage.percentage}}%</span></b>
+          </span>
+        </div>
+        <div class="col-xs-1 coverage-number-smaller" v-if="showStats">
+          <span class="pull-right"> <small> ({{properties.coverage.successes.toLocaleString()}}/&#8203{{properties.coverage.checks.toLocaleString()}}) </small></span>
+        </div>
+
+        <div class="col-xs-5" v-if="showStats">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" :aria-valuenow="properties.coverage.percentage" aria-valuemin="0" aria-valuemax="100" :style="{width: properties.coverage.percentage + '%'}">
+              <span class="sr-only">{{properties.coverage.percentage}}% Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <tree-item
+      class="item"
+      v-for="(properties, key) in subproperties"
+      :key="key"
+      :name="key"
+      :search="search"
+      :path="createNewPath(key)"
+      :properties="properties"
+      :filter="filter"
+      :open="childrenOpen"
+      :depth="depth + 1"
+    ></tree-item>
+  </fragment>
+</script>
+{% endverbatim %}
+
+<script src="{% static 'dataexplore/js/coverage-report.js' %}"></script>
+
+{% endblock %}
 
 
 {% block bottomcontent1 %}
 {% endblock %}
 {% block bottomcontent2 %}
 {% endblock %}
+
+
+
