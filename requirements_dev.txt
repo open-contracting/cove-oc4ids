@@ -129,7 +129,7 @@ jsonschema==3.2.0
     #   -r requirements.txt
     #   libcove
     #   libcoveocds
-libcove==0.25.0
+libcove==0.26.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
