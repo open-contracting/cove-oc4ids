@@ -28,7 +28,7 @@ def server_url(request, live_server):
         return live_server.url
 
 
-@pytest.mark.parametrize(('link_text', 'expected_url'), [(
+@pytest.mark.parametrize('link_text,expected_url', [(
     'Open Contracting Partnership',
     'https://www.open-contracting.org',
 )])
