@@ -12,16 +12,17 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements_dev.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt', 'setup.py') }}
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: pip install -r requirements.txt
       # Check requirements.txt contains production requirements.
       - run: ./manage.py --help
       - run: pip install -r requirements_dev.txt
-      # Install gettext for translations, and translate-toolkit for `pocount`.
-      - run: sudo apt update
-      - run: sudo apt install gettext translate-toolkit
+      - name: Install gettext for compilemessages
+        run: |
+          sudo apt update
+          sudo apt install gettext
       - name: Run checks and tests
         run: |
           ./manage.py migrate
