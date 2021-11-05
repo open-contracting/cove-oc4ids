@@ -57,7 +57,7 @@ VALIDATION_ERROR_LOCATIONS_SAMPLE = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/infrastructure/media/'
 
-SECRET_KEY = settings.SECRET_KEY
+SECRET_KEY = os.getenv('SECRET_KEY', '2n5k63x#a(xc@-!tpxisd)bd!3bimfr1prj-*t7tnl(*j+#$0k')
 DEBUG = settings.DEBUG
 ALLOWED_HOSTS = settings.ALLOWED_HOSTS
 

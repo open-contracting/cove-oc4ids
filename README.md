@@ -37,7 +37,7 @@ pysassc -t compressed -I bootstrap cove_ocds/sass/styles-oc4ids.sass cove_ocds/s
 [Set up chromedriver](https://chromedriver.chromium.org/getting-started), then run:
 
 ```bash
-DJANGO_SETTINGS_MODULE=cove_project.settings pytest
+pytest
 ```
 
 ## Translations
