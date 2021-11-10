@@ -1,35 +1,17 @@
+from cove.urls import handler500  # noqa: F401
+from cove.urls import urlpatterns as urlpatterns_core
 from django.conf import settings
 from django.conf.urls.static import static
-from django.http import HttpResponseServerError
-from django.template import loader
-from django.urls import include, re_path
+from django.urls import include, path, re_path
 from django.views.generic import RedirectView
 
-from cove_oc4ids.views import explore_oc4ids
+import cove_oc4ids.views
+
+urlpatterns_core += [re_path(r"^data/(.+)$", cove_oc4ids.views.explore_oc4ids, name="explore")]
 
 urlpatterns = [
-    # Allow cove to respond on both the root url and a prefixed
-    # one
-    re_path(r'^$', RedirectView.as_view(pattern_name='index',
-                                        permanent=False)),
-
-    re_path(settings.URL_PREFIX, include('cove.urls')),
-    re_path(settings.URL_PREFIX + 'data/(.+)$', explore_oc4ids,
-            name='explore'),
+    path('', RedirectView.as_view(pattern_name='index', permanent=False)),
+    path(settings.URL_PREFIX, include(urlpatterns_core)),
 ]
 
-# Add static media urls so that the inbuilt dev server can serve them
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-def handler500(request):
-    """500 error handler which includes ``request`` in the context.
-    """
-
-    context = {
-        'request': request,
-    }
-    context.update(settings.COVE_CONFIG)
-
-    t = loader.get_template('500.html')
-    return HttpResponseServerError(t.render(context))

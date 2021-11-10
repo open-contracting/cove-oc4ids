@@ -174,7 +174,7 @@ COVE_CONFIG = {
     'support_email': 'data@open-contracting.org',
 }
 
-URL_PREFIX = r'infrastructure/review/'
+URL_PREFIX = 'infrastructure/review/'
 
 # Because of how the standard site proxies traffic, we want to use this
 USE_X_FORWARDED_HOST = True
