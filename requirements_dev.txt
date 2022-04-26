@@ -129,7 +129,7 @@ jsonschema==3.2.0
     #   -r requirements.txt
     #   libcove
     #   libcoveocds
-libcove==0.26.0
+libcove==0.27.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
@@ -225,6 +225,10 @@ requests==2.26.0
     #   libcoveocds
     #   libcoveweb
     #   transifex-client
+rfc3339-validator==0.1.4
+    # via
+    #   -r requirements.txt
+    #   libcove
 rfc3987==1.3.8
     # via
     #   -r requirements.txt
@@ -244,6 +248,7 @@ six==1.16.0
     #   jsonschema
     #   libsass
     #   pymemcache
+    #   rfc3339-validator
     #   transifex-client
     #   zodb
 smmap==4.0.0
@@ -252,10 +257,6 @@ sqlparse==0.4.2
     # via
     #   -r requirements.txt
     #   django
-strict-rfc3339==0.7
-    # via
-    #   -r requirements.txt
-    #   libcove
 text-unidecode==1.3
     # via python-slugify
 toml==0.10.2
