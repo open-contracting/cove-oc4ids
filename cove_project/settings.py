@@ -11,15 +11,16 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from pathlib import Path
 
 import environ
 from cove import settings
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Build paths inside the project like this: BASE_DIR / "subdir".
+BASE_DIR = Path(__file__).resolve().parents[1]
 
 env = environ.Env(  # set default values and casting
-    DB_NAME=(str, os.path.join(BASE_DIR, 'db.sqlite3')),
+    DB_NAME=(str, str(BASE_DIR / 'db.sqlite3')),
     FATHOM_ANALYTICS_DOMAIN=(str, "cdn.usefathom.com"),
     FATHOM_ANALYTICS_ID=(str, ""),
     SENTRY_DSN=(str, ''),
@@ -54,7 +55,7 @@ VALIDATION_ERROR_LOCATIONS_SAMPLE = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
 # We can't take MEDIA_ROOT and MEDIA_URL from cove settings,
 # ... otherwise the files appear under the BASE_DIR that is the Cove library install.
 # That could get messy. We want them to appear in our directory.
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/infrastructure/media/'
 
 SECRET_KEY = os.getenv('SECRET_KEY', '2n5k63x#a(xc@-!tpxisd)bd!3bimfr1prj-*t7tnl(*j+#$0k')
@@ -141,7 +142,7 @@ USE_TZ = settings.USE_TZ
 
 LANGUAGES = settings.LANGUAGES
 
-LOCALE_PATHS = (os.path.join(BASE_DIR, 'cove_oc4ids', 'locale'),)
+LOCALE_PATHS = (BASE_DIR / 'cove_oc4ids' / 'locale',)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -150,7 +151,7 @@ LOCALE_PATHS = (os.path.join(BASE_DIR, 'cove_oc4ids', 'locale'),)
 # ... otherwise the files appear under the BASE_DIR that is the Cove library install.
 # and that doesn't work with our standard Apache setup.
 STATIC_URL = '/infrastructure/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Misc
 
