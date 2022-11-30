@@ -2,10 +2,9 @@
 *.swp
 *.mo
 *~
-.ve
-.ve2
 *.pyc
 __pycache__
+.coverage
 .ve
 /media
 /chromedriver

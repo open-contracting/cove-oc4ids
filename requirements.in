@@ -3,6 +3,7 @@ django-bootstrap3
 django-environ
 libcove
 libcoveoc4ids
-libcoveweb
+-e git+https://github.com/jpmckinney/lib-cove-web.git@unclosed-file#egg=libcoveweb
+# libcoveweb
 pymemcache
 sentry-sdk

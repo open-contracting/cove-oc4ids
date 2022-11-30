@@ -15,8 +15,6 @@ from django.core.files.base import ContentFile
 def test_explore_page(client, json_data):
     data = SuppliedData.objects.create()
     data.original_file.save('test.json', ContentFile(json_data))
-    data.original_file.close()
     data.current_app = 'cove_oc4ids'
-    response = client.get(data.get_absolute_url())
-    assert response.status_code == 200
-    response.close()
+    resp = client.get(data.get_absolute_url())
+    assert resp.status_code == 200
