@@ -18,3 +18,4 @@ def test_explore_page(client, json_data):
     data.current_app = 'cove_oc4ids'
     resp = client.get(data.get_absolute_url())
     assert resp.status_code == 200
+    resp.close()
