@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements_dev.in
 #
+-e git+https://github.com/jpmckinney/lib-cove-web.git@unclosed-file#egg=libcoveweb
+    # via -r requirements.txt
 asgiref==3.4.1
     # via
     #   -r requirements.txt
@@ -141,8 +143,6 @@ libcoveocds==0.11.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
-libcoveweb==0.25.0
-    # via -r requirements.txt
 libsass==0.21.0
     # via -r requirements_dev.in
 lxml==4.9.1
