@@ -18,5 +18,5 @@ jobs:
       - run: pip install -r requirements_dev.txt
       - env:
           # https://github.com/OpenDataServices/lib-cove-web/pull/108
-          STANDARD_MAINTENANCE_SCRIPTS_IGNORE: cove
+          STANDARD_MAINTENANCE_SCRIPTS_IGNORE: cove,flattentool,requests,rfc6266_parser
         run: pytest /tmp/test_requirements.py
