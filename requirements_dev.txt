@@ -141,7 +141,7 @@ libcoveocds==0.11.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
-libcoveweb==0.24.1
+libcoveweb==0.25.0
     # via -r requirements.txt
 libsass==0.21.0
     # via -r requirements_dev.in
