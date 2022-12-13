@@ -9,4 +9,3 @@ pytest-cov
 pytest-django
 pytest-localserver
 selenium
-transifex-client
