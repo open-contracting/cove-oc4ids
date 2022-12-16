@@ -92,6 +92,7 @@ MIDDLEWARE = (
 ROOT_URLCONF = 'cove_project.urls'
 
 TEMPLATES = settings.TEMPLATES
+TEMPLATES[0]["DIRS"] = [BASE_DIR / "cove_project" / "templates"]
 TEMPLATES[0]["OPTIONS"]["context_processors"].append(
     "cove_project.context_processors.from_settings",
 )
