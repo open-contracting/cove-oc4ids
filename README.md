@@ -47,7 +47,7 @@ We have used Google Translate to perform initial translations from English, but 
 
 ### Translations for Translators
 
-Translators can provide translations for this application by becomming a collaborator on Transifex https://www.transifex.com/open-contracting-partnership-1/cove-1/
+Translators can provide translations for this application by becoming a collaborator on Transifex https://www.transifex.com/open-contracting-partnership-1/cove-1/
 
 ### Translations for Developers
 
@@ -78,7 +78,7 @@ In order to compile them:
 python manage.py compilemessages
 ```
 
-Keep the makemessages and pull messages steps in thier own commits seperate from the text changes.
+Keep the makemessages and pull messages steps in their own commits separate from the text changes.
 
 To check that all new text is written so that it is able to be translated you could install and run `django-template-i18n-lint`
 
