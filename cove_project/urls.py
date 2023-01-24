@@ -10,7 +10,7 @@ import cove_oc4ids.views
 urlpatterns_core += [re_path(r"^data/(.+)$", cove_oc4ids.views.explore_oc4ids, name="explore")]
 
 urlpatterns = [
-    path('', RedirectView.as_view(pattern_name='index', permanent=False)),
+    path("", RedirectView.as_view(pattern_name="index", permanent=False)),
     path(settings.URL_PREFIX, include(urlpatterns_core)),
 ]
 
