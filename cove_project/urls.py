@@ -2,8 +2,7 @@ from cove.urls import handler500  # noqa: F401
 from cove.urls import urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import include, path, re_path
-from django.views.generic import RedirectView
+from django.urls import re_path
 
 import cove_oc4ids.views
 
