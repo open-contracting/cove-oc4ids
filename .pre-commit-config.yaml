@@ -14,3 +14,13 @@ repos:
     rev: 5.12.0
     hooks:
       - id: isort
+  - repo: https://github.com/jazzband/pip-tools
+    rev: 6.12.1
+    hooks:
+      - id: pip-compile
+        name: pip-compile requirements.in
+        files: ^requirements\.(in|txt)$
+      - id: pip-compile
+        name: pip-compile requirements_dev.in
+        files: ^requirements(_dev)?\.(in|txt)$
+        args: [requirements_dev.in]
