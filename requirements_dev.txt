@@ -4,8 +4,6 @@
 #
 #    pip-compile requirements_dev.in
 #
--e git+https://github.com/jpmckinney/lib-cove-web.git@unclosed-file#egg=libcoveweb
-    # via -r requirements.txt
 asgiref==3.4.1
     # via
     #   -r requirements.txt
@@ -129,6 +127,8 @@ libcoveocds==0.11.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
+libcoveweb==0.26.0
+    # via -r requirements.txt
 libsass==0.21.0
     # via -r requirements_dev.in
 lxml==4.9.1
@@ -139,6 +139,10 @@ markdown-it-py==1.1.0
     # via
     #   -r requirements.txt
     #   libcoveocds
+markupsafe==2.1.2
+    # via
+    #   -r requirements.txt
+    #   werkzeug
 mccabe==0.6.1
     # via flake8
 odfpy==1.4.1
@@ -247,10 +251,6 @@ transaction==3.0.1
     # via
     #   -r requirements.txt
     #   zodb
-uc-rfc6266-parser==0.1.0
-    # via
-    #   -r requirements.txt
-    #   libcoveweb
 urllib3==1.26.6
     # via
     #   -r requirements.txt
@@ -261,11 +261,11 @@ webencodings==0.5.1
     # via
     #   -r requirements.txt
     #   bleach
-werkzeug==1.0.1
+werkzeug==2.2.3
     # via
     #   -r requirements.txt
+    #   libcoveweb
     #   pytest-localserver
-    #   uc-rfc6266-parser
 wheel==0.37.0
     # via pip-tools
 xmltodict==0.12.0
