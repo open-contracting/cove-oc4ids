@@ -25,10 +25,6 @@ btrees==4.9.2
     # via
     #   -r requirements.txt
     #   zodb
-cached-property==1.5.2
-    # via
-    #   -r requirements.txt
-    #   libcove
 certifi==2022.12.7
     # via
     #   -r requirements.txt
@@ -109,12 +105,12 @@ jsonref==0.2
     #   -r requirements.txt
     #   flattentool
     #   libcove
-jsonschema==3.2.0
+jsonschema==4.17.3
     # via
     #   -r requirements.txt
     #   libcove
     #   libcoveocds
-libcove==0.28.0
+libcove==0.30.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
@@ -235,7 +231,6 @@ six==1.16.0
     # via
     #   -r requirements.txt
     #   bleach
-    #   jsonschema
     #   libsass
     #   pymemcache
     #   rfc3339-validator
