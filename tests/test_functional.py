@@ -43,6 +43,6 @@ def server_url(request, live_server):
 def test_footer_oc4ids(server_url, browser, link_text, expected_url):
     browser.get(server_url)
     footer = browser.find_element(By.ID, "footer")
-    link = footer.find_element_by_link_text(link_text)
+    link = footer.find_element(By.LINK_TEXT, link_text)
     href = link.get_attribute("href")
     assert expected_url in href
