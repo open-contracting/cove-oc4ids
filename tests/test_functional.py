@@ -3,6 +3,7 @@ import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 BROWSER = os.environ.get("BROWSER", "ChromeHeadless")
 
@@ -41,7 +42,7 @@ def server_url(request, live_server):
 )
 def test_footer_oc4ids(server_url, browser, link_text, expected_url):
     browser.get(server_url)
-    footer = browser.find_element_by_id("footer")
+    footer = browser.find_element(By.ID, "footer")
     link = footer.find_element_by_link_text(link_text)
     href = link.get_attribute("href")
     assert expected_url in href
