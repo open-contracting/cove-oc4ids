@@ -186,7 +186,7 @@ msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:124
 msgid ""
-"The application works with data provided in an <a href=\"http://standard."
+"The application works with data provided in an <a href=\"https://standard."
 "open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
 "project package</a>."
 msgstr ""
@@ -206,7 +206,7 @@ msgstr ""
 #: cove_oc4ids/templates/cove_oc4ids/base.html:127
 msgid ""
 "To preview how the data review tool works, try loading some <a href=\"?"
-"source_url=http://standard.open-contracting.org/infrastructure/latest/en/"
+"source_url=https://standard.open-contracting.org/infrastructure/latest/en/"
 "_static/example.json\">sample data</a>."
 msgstr ""
 
@@ -416,7 +416,7 @@ msgstr ""
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:270
 msgid ""
 "Make sure you list the definition of any additional codelist values you "
-"include within your <a href=\"http://standard.open-contracting.org/latest/en/"
+"include within your <a href=\"https://standard.open-contracting.org/latest/en/"
 "implementation/publication_policy/\">publication policy</a>, and if you "
 "believe they should be added as recommended values in the open codelist, "
 "please suggest this via the <a href=\"https://github.com/open-contracting/"
