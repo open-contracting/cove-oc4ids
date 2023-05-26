@@ -53,7 +53,7 @@ contextlib2==21.6.0
     # via
     #   -r requirements.txt
     #   schema
-coverage==5.5
+coverage[toml]==5.5
     # via
     #   coveralls
     #   pytest-cov
@@ -210,11 +210,11 @@ pytest==7.3.1
     #   -r requirements_dev.in
     #   pytest-cov
     #   pytest-django
-pytest-cov==2.12.1
+pytest-cov==4.1.0
     # via -r requirements_dev.in
-pytest-django==4.4.0
+pytest-django==4.5.2
     # via -r requirements_dev.in
-pytest-localserver==0.5.0
+pytest-localserver==0.7.1
     # via -r requirements_dev.in
 pytz==2021.1
     # via
@@ -261,7 +261,7 @@ sqlparse==0.4.4
     #   -r requirements.txt
     #   django
 toml==0.10.2
-    # via pytest-cov
+    # via coverage
 tomli==1.2.1
     # via
     #   build
