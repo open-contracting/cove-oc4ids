@@ -29,6 +29,8 @@ btrees==4.9.2
     # via
     #   -r requirements.txt
     #   zodb
+build==0.10.0
+    # via pip-tools
 certifi==2022.12.7
     # via
     #   -r requirements.txt
@@ -170,15 +172,14 @@ packaging==21.0
     # via
     #   -r requirements.txt
     #   bleach
+    #   build
     #   pytest
-pep517==0.11.0
-    # via pip-tools
 persistent==4.7.0
     # via
     #   -r requirements.txt
     #   btrees
     #   zodb
-pip-tools==6.4.0
+pip-tools==6.13.0
     # via -r requirements_dev.in
 pluggy==1.0.0
     # via pytest
@@ -198,6 +199,8 @@ pyparsing==2.4.7
     # via
     #   -r requirements.txt
     #   packaging
+pyproject-hooks==1.0.0
+    # via build
 pyrsistent==0.18.0
     # via
     #   -r requirements.txt
@@ -264,7 +267,9 @@ toml==0.10.2
     #   pytest
     #   pytest-cov
 tomli==1.2.1
-    # via pep517
+    # via
+    #   build
+    #   pyproject-hooks
 transaction==3.0.1
     # via
     #   -r requirements.txt
