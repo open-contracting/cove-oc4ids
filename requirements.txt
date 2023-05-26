@@ -103,7 +103,7 @@ pytz==2021.1
     # via
     #   django
     #   flattentool
-requests==2.26.0
+requests==2.31.0
     # via
     #   libcove
     #   libcoveocds
