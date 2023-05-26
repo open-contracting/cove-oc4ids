@@ -15,7 +15,6 @@ attrs==21.2.0
     #   -r requirements.txt
     #   jsonschema
     #   outcome
-    #   pytest
     #   trio
 backports-datetime-fromisoformat==1.0.0
     # via
@@ -86,6 +85,7 @@ et-xmlfile==1.1.0
     #   openpyxl
 exceptiongroup==1.1.1
     # via
+    #   pytest
     #   trio
     #   trio-websocket
 flake8==3.9.2
@@ -183,8 +183,6 @@ pip-tools==6.13.0
     # via -r requirements_dev.in
 pluggy==1.0.0
     # via pytest
-py==1.10.0
-    # via pytest
 pycodestyle==2.7.0
     # via flake8
 pycparser==2.20
@@ -207,7 +205,7 @@ pyrsistent==0.18.0
     #   jsonschema
 pysocks==1.7.1
     # via urllib3
-pytest==6.2.5
+pytest==7.3.1
     # via
     #   -r requirements_dev.in
     #   pytest-cov
@@ -263,13 +261,12 @@ sqlparse==0.4.4
     #   -r requirements.txt
     #   django
 toml==0.10.2
-    # via
-    #   pytest
-    #   pytest-cov
+    # via pytest-cov
 tomli==1.2.1
     # via
     #   build
     #   pyproject-hooks
+    #   pytest
 transaction==3.0.1
     # via
     #   -r requirements.txt
@@ -295,7 +292,7 @@ werkzeug==2.2.3
     #   -r requirements.txt
     #   libcoveweb
     #   pytest-localserver
-wheel==0.37.0
+wheel==0.40.0
     # via pip-tools
 wsproto==1.2.0
     # via trio-websocket
