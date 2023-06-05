@@ -7,3 +7,4 @@ libcoveoc4ids
 libcoveweb
 pymemcache
 sentry-sdk
+ocdskit
