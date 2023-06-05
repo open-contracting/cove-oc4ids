@@ -15,7 +15,7 @@ jobs:
           cache-dependency-path: '**/requirements*.txt'
       - uses: pre-commit/action@v3.0.0
         with:
-          extra_args: pip-compile
+          extra_args: pip-compile --all-files
       - shell: bash
         run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
       - shell: bash
