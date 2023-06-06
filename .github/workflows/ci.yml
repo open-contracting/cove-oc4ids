@@ -18,6 +18,7 @@ jobs:
       - name: Run checks and tests
         env:
           PYTHONWARNINGS: error
+        shell: bash
         run: |
           ./manage.py migrate
           ./manage.py makemigrations --check --dry-run
