@@ -17,14 +17,14 @@ jobs:
       - run: pip install -r requirements_dev.txt
       - name: Run checks and tests
         env:
-          PYTHONWARNINGS: error,ignore::DeprecationWarning
+          PYTHONWARNINGS: error,ignore::DeprecationWarning:libcove.lib.common
         shell: bash
         run: |
           ./manage.py migrate
           ./manage.py makemigrations --check --dry-run
           ./manage.py check --fail-level WARNING
           # https://github.com/OpenDataServices/lib-cove/issues/112
-          pytest -W error -W ignore::DeprecationWarning --cov cove_oc4ids --cov cove_project
+          pytest -W error -W ignore::DeprecationWarning:libcove.lib.common --cov cove_oc4ids --cov cove_project
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: coveralls --service=github
