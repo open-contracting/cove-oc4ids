@@ -28,7 +28,7 @@ contextlib2==21.6.0
     # via schema
 defusedxml==0.7.1
     # via odfpy
-django==3.2.19
+django==3.2.20
     # via
     #   -r requirements.in
     #   django-bootstrap3
@@ -61,7 +61,7 @@ jsonschema==4.17.3
     #   -r requirements.in
     #   libcove
     #   libcoveocds
-libcove @ git+https://github.com/jpmckinney/lib-cove.git@hotfix
+libcove @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
     # via
     #   -r requirements.in
     #   libcoveoc4ids
