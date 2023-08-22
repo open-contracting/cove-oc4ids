@@ -34,8 +34,6 @@ pysassc -t compressed -I bootstrap cove_ocds/sass/styles-oc4ids.sass cove_ocds/s
 
 ## Running the tests
 
-[Set up chromedriver](https://chromedriver.chromium.org/getting-started), then run:
-
 ```bash
 pytest
 ```
