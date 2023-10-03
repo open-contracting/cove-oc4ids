@@ -61,7 +61,7 @@ jsonschema==4.17.3
     #   -r requirements.in
     #   libcove
     #   libcoveocds
-libcove @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
+libcove[flatten] @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
     # via
     #   -r requirements.in
     #   libcoveoc4ids
