@@ -58,7 +58,6 @@ jsonref==0.2
     #   libcove
 jsonschema==4.17.3
     # via
-    #   -r requirements.in
     #   libcove
     #   libcoveocds
 libcove[flatten] @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
