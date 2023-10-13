@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-BROWSER = os.environ.get("BROWSER", "ChromeHeadless")
+BROWSER = os.getenv("BROWSER", "ChromeHeadless")
 
 
 @pytest.fixture(scope="module")
