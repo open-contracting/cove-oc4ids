@@ -127,7 +127,7 @@ sqlparse==0.4.4
     # via django
 transaction==3.0.1
     # via zodb
-urllib3==2.0.6
+urllib3==2.0.7
     # via
     #   requests
     #   sentry-sdk
