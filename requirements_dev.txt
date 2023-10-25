@@ -84,7 +84,10 @@ et-xmlfile==1.1.0
     #   -r requirements.txt
     #   openpyxl
 exceptiongroup==1.1.1
-    # via trio-websocket
+    # via
+    #   pytest
+    #   trio
+    #   trio-websocket
 flake8==3.9.2
     # via -r requirements_dev.in
 flattentool==0.19.0
@@ -263,6 +266,11 @@ sqlparse==0.4.4
     #   django
 toml==0.10.2
     # via coverage
+tomli==2.0.1
+    # via
+    #   build
+    #   pyproject-hooks
+    #   pytest
 transaction==3.0.1
     # via
     #   -r requirements.txt
