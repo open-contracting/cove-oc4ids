@@ -84,10 +84,7 @@ et-xmlfile==1.1.0
     #   -r requirements.txt
     #   openpyxl
 exceptiongroup==1.1.1
-    # via
-    #   pytest
-    #   trio
-    #   trio-websocket
+    # via trio-websocket
 flake8==3.9.2
     # via -r requirements_dev.in
 flattentool==0.19.0
@@ -131,9 +128,7 @@ libcove[flatten] @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
     #   libcoveocds
     #   libcoveweb
 libcoveoc4ids[perf]==0.4.2
-    # via
-    #   -r requirements.txt
-    #   libcoveoc4ids
+    # via -r requirements.txt
 libcoveocds==0.11.0
     # via
     #   -r requirements.txt
@@ -268,11 +263,6 @@ sqlparse==0.4.4
     #   django
 toml==0.10.2
     # via coverage
-tomli==2.0.1
-    # via
-    #   build
-    #   pyproject-hooks
-    #   pytest
 transaction==3.0.1
     # via
     #   -r requirements.txt
@@ -293,7 +283,7 @@ webencodings==0.5.1
     # via
     #   -r requirements.txt
     #   bleach
-werkzeug==2.2.3
+werkzeug==3.0.1
     # via
     #   -r requirements.txt
     #   libcoveweb
