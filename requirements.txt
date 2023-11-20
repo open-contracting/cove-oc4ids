@@ -42,7 +42,7 @@ django-environ==0.6.0
     # via libcoveweb
 et-xmlfile==1.1.0
     # via openpyxl
-flattentool==0.19.0
+flattentool==0.24.0
     # via
     #   libcove
     #   libcoveweb
