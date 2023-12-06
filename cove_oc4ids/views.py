@@ -1,7 +1,7 @@
 import json
 import logging
-from decimal import Decimal
 import re
+from decimal import Decimal
 
 from cove.views import cove_web_input_error, explore_data_context
 from django.conf import settings
