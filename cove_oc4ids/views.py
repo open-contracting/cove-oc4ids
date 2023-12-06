@@ -85,16 +85,17 @@ def explore_oc4ids(request, pk):
 
     context = common_checks_oc4ids(context, upload_dir, json_data, schema_oc4ids, lib_cove_oc4ids_config)
 
+    for key in ("additional_closed_codelist_values", "additional_open_codelist_values"):
+        for path_string, codelist_info in context[key].items():
+            if codelist_info["codelist_url"].startswith(schema_oc4ids.codelists):
+                codelist_info["codelist_url"] = (
+                    "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#"
+                    + re.sub(r"([A-Z])", r"\1", codelist_info["codelist"].split(".")[0]).lower()
+                )
+
     if not db_data.rendered:
         db_data.rendered = True
     db_data.save()
-
-    for path_string, codelist_info in context["additional_open_codelist_values"].items():
-        if codelist_info["codelist_url"].startswith(schema_oc4ids.codelists):
-            codelist_info["codelist_url"] = (
-                "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#"
-                + re.sub(r"([A-Z])", r"\1", codelist_info["codelist"].split(".")[0]).lower()
-            )
 
     template = "cove_oc4ids/explore.html"
 
