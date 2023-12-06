@@ -40,6 +40,15 @@ def test_codelist_url_extension_codelists(client):
     resp = client.get(data.get_absolute_url())
 
     assert resp.status_code == 200
+    assert len(resp.context["additional_closed_codelist_values"]) == 2
+    assert (
+        resp.context["additional_closed_codelist_values"]["projects/status"]["codelist_url"]
+        == "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#projectstatus"
+    )
+    assert (
+        resp.context["additional_closed_codelist_values"]["projects/type"]["codelist_url"]
+        == "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#projecttype"
+    )
     assert len(resp.context["additional_open_codelist_values"]) == 1
     assert (
         resp.context["additional_open_codelist_values"]["projects/sector"]["codelist_url"]
