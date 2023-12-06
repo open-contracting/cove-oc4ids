@@ -1,6 +1,7 @@
 import json
 import logging
 from decimal import Decimal
+import re
 
 from cove.views import cove_web_input_error, explore_data_context
 from django.conf import settings
@@ -87,6 +88,13 @@ def explore_oc4ids(request, pk):
     if not db_data.rendered:
         db_data.rendered = True
     db_data.save()
+
+    for path_string, codelist_info in context["additional_open_codelist_values"].items():
+        if codelist_info["codelist_url"].startswith(schema_oc4ids.codelists):
+            codelist_info["codelist_url"] = (
+                "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#"
+                + re.sub(r"([A-Z])", r"\1", codelist_info["codelist"].split(".")[0]).lower()
+            )
 
     template = "cove_oc4ids/explore.html"
 
