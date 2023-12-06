@@ -1,0 +1,24 @@
+{
+  "version": "0.9",
+  "uri": "https://standard.open-contracting.org/infrastructure/0.9/en/_static/example.json",
+  "publishedDate": "2018-12-10T15:53:00Z",
+  "publisher": {
+    "name": "Open Data Services Co-operative Limited",
+    "scheme": "GB-COH",
+    "uid": "9506232",
+    "uri": "http://data.companieshouse.gov.uk/doc/company/09506232"
+  },
+  "license": "http://opendatacommons.org/licenses/pddl/1.0/",
+  "publicationPolicy": "https://standard.open-contracting.org/1.1/en/implementation/publication_policy/",
+  "projects": [
+    {
+      "id": "proj1",
+      "status": "Bad news captain",
+      "sector": [
+        "little square buildings",
+        "pointy roofs"
+      ],
+      "type": "shiny and new"
+    }
+  ]
+}

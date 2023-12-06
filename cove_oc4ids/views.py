@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 from decimal import Decimal
 
 from cove.views import cove_web_input_error, explore_data_context
@@ -83,6 +84,14 @@ def explore_oc4ids(request, pk):
             json_data = json.load(fp, parse_float=Decimal)
 
     context = common_checks_oc4ids(context, upload_dir, json_data, schema_oc4ids, lib_cove_oc4ids_config)
+
+    for key in ("additional_closed_codelist_values", "additional_open_codelist_values"):
+        for path_string, codelist_info in context[key].items():
+            if codelist_info["codelist_url"].startswith(schema_oc4ids.codelists):
+                codelist_info["codelist_url"] = (
+                    "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#"
+                    + re.sub(r"([A-Z])", r"\1", codelist_info["codelist"].split(".")[0]).lower()
+                )
 
     if not db_data.rendered:
         db_data.rendered = True
