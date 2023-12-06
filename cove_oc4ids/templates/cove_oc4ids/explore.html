@@ -221,6 +221,30 @@
 
     <div>
 
+        {% if additional_closed_codelist_values %}
+            <a name="additional-closed-codelist-values" class="anchor"></a>
+            <div class="panel panel-danger">
+              <div id="additional-closed-codelist-values-panel" class="panel-heading pointer" role="region" aria-expanded="true" aria-controls="additionalClosedCodelist" data-toggle="collapse" data-target="#additionalClosedCodelist">
+                <h4 class="panel-title">
+                  <span class="our-title"><span class="glyphicon glyphicon-collapse-up"></span>{% trans 'Codelist Errors' %}</span>
+                </h4>
+              </div>
+              <div id="additionalClosedCodelist" class="collapse in">
+                <div class="panel-body">
+                  {% blocktrans %}The fields below use closed codelists. When using these fields, you <strong> must </strong> use one of the pre-defined codelist values. If you use a value that is not on the relevant codelist, your data will not pass structural checks. Where you see + or - this indicates that the codelist has been modified with these additions (+) or subtractions (-) by one or more extensions.{% endblocktrans %}
+                  {% with additional_codelist_values=additional_closed_codelist_values %}
+                  <div>{% include "additional_codelist_values.html" %}</div>
+                  {% endwith %}
+                  {% blocktrans %}You may need to create a mapping between your local codes and the OC4IDS closed codelists to address these errors. In most cases, there will be a ‘detail’ field where you can also include your local codes. If you have already completed a mapping, please review the spelling and capitalisation used in these closed codelist fields.{% endblocktrans %}
+                </div>
+              </div>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <div>
+
         {% if additional_fields_count %}
 
               <a name="additional-fields" class="anchor"></a>
