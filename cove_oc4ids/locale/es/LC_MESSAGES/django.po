@@ -7,21 +7,22 @@
 # Ben Webb <ben.webb@opendataservices.coop>, 2020
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
 # Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021
+# James McKinney, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-23 15:13+0000\n"
+"POT-Creation-Date: 2023-12-06 18:12+0000\n"
 "PO-Revision-Date: 2020-10-06 10:51+0000\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/113687/es/)\n"
+"Last-Translator: James McKinney, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:8
 msgid "Check Description"
@@ -54,13 +55,14 @@ msgid "There is a value without a <code>currency</code>."
 msgid_plural "There are %(counter)s values without a <code>currency</code>."
 msgstr[0] "Hay valores sin un <code>valor de moneda</code>."
 msgstr[1] "Hay %(counter)svalores sin un <code>moneda</code>."
+msgstr[2] "Hay %(counter)svalores sin un <code>moneda</code>."
 
 #: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:39
 msgid "Currencies should be published for all values."
 msgstr "Las monedas se deben publicar para todos los valores."
 
 #: cove_oc4ids/templates/cove_oc4ids/additional_checks_table.html:57
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:291
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:315
 #, python-format
 msgid ""
 "%(count)s of your project <code>id</code> fields has a problem: There is no "
@@ -81,6 +83,9 @@ msgstr[0] ""
 "Hay una referencia de organización con un <code>id</code>que no es igual al "
 "<code>id</code> de ninguna de las partes."
 msgstr[1] ""
+"Hay %(counter)sreferencias de su organización con un <code>id</code>que no "
+"es igual al <code>id</code>de ninguna de las <code>partes</code>."
+msgstr[2] ""
 "Hay %(counter)sreferencias de su organización con un <code>id</code>que no "
 "es igual al <code>id</code>de ninguna de las <code>partes</code>."
 
@@ -229,9 +234,10 @@ msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:124
 msgid ""
-"The application works with data provided in an <a href=\"https://standard"
-".open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
-"project package</a>."
+"The application works with data provided in an <a "
+"href=\"https://standard.open-"
+"contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS project"
+" package</a>."
 msgstr ""
 "La aplicación funciona con datos que se proporcionan en un <a "
 "href=\"https://standard.open-"
@@ -357,6 +363,7 @@ msgid "This file contains <strong>%(count)s project.</strong>"
 msgid_plural "This file contains <strong>%(count)s projects.</strong>"
 msgstr[0] "Este proyecto contiene <strong>%(count)sproyecto</strong>."
 msgstr[1] "Este proyecto contiene<strong>%(count)sproyectos.</strong>"
+msgstr[2] "Este proyecto contiene<strong>%(count)sproyectos.</strong>"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:57
 msgid "The schema version specified in the file is"
@@ -388,6 +395,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Hay%(count)s <a href=\"#key-field-info\">IDs de entrega duplicados</a>en "
 "este paquete."
+msgstr[2] ""
+"Hay%(count)s <a href=\"#key-field-info\">IDs de entrega duplicados</a>en "
+"este paquete."
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:90
 #, python-format
@@ -401,6 +411,9 @@ msgstr[0] ""
 "Este archivo usa %(count)s<a href=\"#additional-fields\">campos "
 "adicionales</a> que no se usan en el estándar."
 msgstr[1] ""
+"Este archivo usa %(count)s<a href=\"#additional-fields\">campos "
+"adicionales</a>que no se usan en el estándar."
+msgstr[2] ""
 "Este archivo usa %(count)s<a href=\"#additional-fields\">campos "
 "adicionales</a>que no se usan en el estándar."
 
@@ -468,20 +481,54 @@ msgstr "Errores estructurales"
 msgid "There were no structural errors"
 msgstr "No hay errores estructurales"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:230
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:241
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:229
+msgid "Codelist Errors"
+msgstr "Errores de la Lista de Códigos"
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:234
+msgid ""
+"The fields below use closed codelists. When using these fields, you <strong>"
+" must </strong> use one of the pre-defined codelist values. If you use a "
+"value that is not on the relevant codelist, your data will not pass "
+"structural checks. Where you see + or - this indicates that the codelist has"
+" been modified with these additions (+) or subtractions (-) by one or more "
+"extensions."
+msgstr ""
+"Los siguientes campos utilizan listas de códigos cerradas. Al utilizar estos"
+" campos, <strong>debe </strong>utilizar uno de los valores de la lista de "
+"códigos predefinidos. Si usa un valor que no está en la lista de códigos "
+"relevantes, sus datos no pasarán las verificaciones estructurales. Donde vea"
+" + o - esto indica que la lista de códigos ha sido modificada con estas "
+"adiciones (+) o sustracciones (-) por una o más extensiones."
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:238
+msgid ""
+"You may need to create a mapping between your local codes and the OC4IDS "
+"closed codelists to address these errors. In most cases, there will be a "
+"‘detail’ field where you can also include your local codes. If you have "
+"already completed a mapping, please review the spelling and capitalisation "
+"used in these closed codelist fields."
+msgstr ""
+"Es posible que deba crear un mapeo entre sus códigos locales y las listas de"
+" códigos cerradas de OC4IDS para abordar estos errores. En la mayoría de los"
+" casos, habrá un campo de \"detalles\" donde también puede incluir sus "
+"códigos locales. Si ya ha completado un mapeo, favor revise la ortografía y "
+"las mayúsculas utilizadas en estos campos cerrados de la lista de códigos."
+
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:254
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:265
 msgid "Additional Fields"
 msgstr "Campos adicionales"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:245
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:269
 msgid "There were no additional fields"
 msgstr "No hay campos adicionales"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:260
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:284
 msgid "Additional Codelist Values"
 msgstr "Valores Adicionales de la Lista de Código "
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:264
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:288
 msgid ""
 "Your data contains a number of fields that use an open codelist. You should "
 "use values from the codelist whenever possible, but if the codelist does not"
@@ -495,14 +542,15 @@ msgstr ""
 "adicionales. Los siguientes valores no aparecen en la lista de código, debe "
 "revisar que quiera utilizar estos valores adicionales."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:270
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:294
 msgid ""
 "Make sure you list the definition of any additional codelist values you "
 "include within your <a href=\"https://standard.open-"
 "contracting.org/latest/en/implementation/publication_policy/\">publication "
 "policy</a>, and if you believe they should be added as recommended values in"
-" the open codelist, please suggest this via the <a href=\"https://github.com"
-"/open-contracting/infrastructure/issues/new\">OC4IDS issue tracker.</a>"
+" the open codelist, please suggest this via the <a "
+"href=\"https://github.com/open-"
+"contracting/infrastructure/issues/new\">OC4IDS issue tracker.</a>"
 msgstr ""
 "Asegúrese de dar la definición de cualquier valor adicional a la lista de "
 "código que incluya dentro de su <a href=\"https://standard.open-"
@@ -512,29 +560,29 @@ msgstr ""
 "href=\"https://github.com/open-contracting/infrastructure/issues/new\"> "
 "rastreador de issues OC4IDS.</a>"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:283
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:307
 msgid "Conformance (Rules)"
 msgstr "Conformidad (Reglas)"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:288
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:312
 msgid ""
 "Fixing the following issues will improve the interoperability of your data."
 msgstr ""
 "Arreglar los siguientes issues mejorara la interoperabilidad de sus datos."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:294
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:318
 msgid "View all errors"
 msgstr "Ver todos los errores"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:299
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:323
 msgid "id"
 msgstr "id"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:299
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:323
 msgid "Path"
 msgstr "Ruta"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:308
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:332
 msgid ""
 "What is the project <code>id</code> field? A globally unique identifier for "
 "this infrastructure project. Composed of an OC4IDS prefix and an identifier "
@@ -550,18 +598,18 @@ msgstr ""
 "contracting.org/infrastructure/latest/en/guidance/identifiers/#\">guía de "
 "identificadores de proyectos OC4IDS.</a>."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:327
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:351
 msgid "Additional Checks"
 msgstr "Revisiones adicionales"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:343
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:367
 msgid ""
 "This coverage report details which OC4IDS fields are populated in your data."
 msgstr ""
 "Este reporte de cobertura detalla cuáles campos OC4IDS son completados en "
 "tus datos."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:345
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:369
 msgid ""
 "If a field is on an object in an array, then coverage is reported for each "
 "object in the array. For example, in a data file with 100 projects, all of "
@@ -576,7 +624,7 @@ msgstr ""
 "sus campos hijos (por ejemplo <code>parties.id</code>) será calculada sobre "
 "500."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:347
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:371
 msgid ""
 "Child fields are reported in the context of their parent field. For example,"
 " in a data file with 100 projects, 10 of which set "
@@ -591,7 +639,7 @@ msgstr ""
 "para sus campos hijos (como <code>publicAuthority.id</code>) será calculada "
 "sobre 10."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:349
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:373
 #, python-format
 msgid ""
 "It's not expected for all fields to be used (e.g. the source system might "
@@ -603,31 +651,31 @@ msgstr ""
 "una cobertura del 100%% (por ejemplo, un proyecto nuevo puede estar menos "
 "completo que un proyecto finalizado)."
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:369
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:393
 msgid "Search by field name"
 msgstr "Buscar por nombre del campo"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:373
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:397
 msgid "All"
 msgstr "Todo"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:374
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:398
 msgid "Coverage Passed Only"
 msgstr "Solo con cobertura"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:375
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:399
 msgid "Coverage Failed Only"
 msgstr "Solo sin cobertura"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:385
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:409
 msgid "Field Path"
 msgstr "Ruta al campo"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:390
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:414
 msgid "Coverage"
 msgstr "Cobertura"
 
-#: cove_oc4ids/templates/cove_oc4ids/explore.html:400
+#: cove_oc4ids/templates/cove_oc4ids/explore.html:424
 msgid ""
 "Expand an object to check the coverage of its fields, which may be less than"
 " the object's coverage."
@@ -635,15 +683,15 @@ msgstr ""
 "Expande un objeto para comprobar la cobertura en sus campos, que puede ser "
 "menor que la cobertura del objeto."
 
-#: cove_oc4ids/views.py:39 cove_oc4ids/views.py:51
+#: cove_oc4ids/views.py:38 cove_oc4ids/views.py:55
 msgid "Sorry, we can't process that data"
 msgstr "Lo sentimos, no podemos procesar estos datos"
 
-#: cove_oc4ids/views.py:41 cove_oc4ids/views.py:53
+#: cove_oc4ids/views.py:40 cove_oc4ids/views.py:57
 msgid "Try Again"
 msgstr "Intente de nuevo"
 
-#: cove_oc4ids/views.py:42
+#: cove_oc4ids/views.py:43
 msgid ""
 "We think you tried to upload a JSON file, but it is not well formed JSON.\n"
 "\n"
@@ -653,7 +701,7 @@ msgstr ""
 "\n"
 "<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span><strong>Mensaje de error:</strong>{}"
 
-#: cove_oc4ids/views.py:54
+#: cove_oc4ids/views.py:58
 msgid ""
 "OC4IDS JSON should have an object as the top level, the JSON you supplied "
 "does not."
