@@ -126,7 +126,7 @@ libcove[flatten] @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids[perf]==0.4.2
+libcoveoc4ids[perf]==0.4.3
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
