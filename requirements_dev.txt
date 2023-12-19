@@ -10,26 +10,29 @@ asgiref==3.4.1
     #   django
 async-generator==1.10
     # via trio
-attrs==21.2.0
+attrs==23.1.0
     # via
     #   -r requirements.txt
+    #   cattrs
     #   jsonschema
     #   outcome
+    #   referencing
+    #   requests-cache
     #   trio
 backports-datetime-fromisoformat==1.0.0
     # via
     #   -r requirements.txt
     #   flattentool
-bleach==4.1.0
-    # via
-    #   -r requirements.txt
-    #   libcoveocds
 btrees==4.9.2
     # via
     #   -r requirements.txt
     #   zodb
 build==0.10.0
     # via pip-tools
+cattrs==23.2.3
+    # via
+    #   -r requirements.txt
+    #   requests-cache
 certifi==2023.7.22
     # via
     #   -r requirements.txt
@@ -67,7 +70,6 @@ django==3.2.23
     # via
     #   -r requirements.txt
     #   django-bootstrap3
-    #   libcoveocds
     #   libcoveweb
 django-bootstrap3==15.0.0
     # via
@@ -79,8 +81,10 @@ et-xmlfile==1.1.0
     # via
     #   -r requirements.txt
     #   openpyxl
-exceptiongroup==1.1.1
+exceptiongroup==1.2.0
     # via
+    #   -r requirements.txt
+    #   cattrs
     #   pytest
     #   trio
     #   trio-websocket
@@ -109,28 +113,32 @@ isort==5.9.3
 json-merge-patch==0.2
     # via
     #   -r requirements.txt
-    #   libcoveocds
-jsonref==0.2
+    #   ocdsextensionregistry
+jsonref==1.1.0
     # via
     #   -r requirements.txt
     #   flattentool
     #   libcove
-jsonschema==4.17.3
+    #   libcoveocds
+    #   ocdsextensionregistry
+jsonschema==4.20.0
     # via
     #   -r requirements.txt
     #   libcove
     #   libcoveocds
-libcove[flatten] @ https://github.com/jpmckinney/lib-cove/archive/hotfix2.zip
+jsonschema-specifications==2023.11.2
+    # via
+    #   -r requirements.txt
+    #   jsonschema
+libcove==0.32.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids[perf]==0.4.3
-    # via
-    #   -r requirements.txt
-    #   libcoveoc4ids
-libcoveocds==0.11.0
+libcoveoc4ids[perf]==0.5.0
+    # via -r requirements.txt
+libcoveocds==0.12.7
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
@@ -142,20 +150,16 @@ lxml==4.9.1
     # via
     #   -r requirements.txt
     #   flattentool
-markdown-it-py==2.2.0
-    # via
-    #   -r requirements.txt
-    #   libcoveocds
 markupsafe==2.1.2
     # via
     #   -r requirements.txt
     #   werkzeug
 mccabe==0.6.1
     # via flake8
-mdurl==0.1.2
+ocdsextensionregistry==0.3.8
     # via
     #   -r requirements.txt
-    #   markdown-it-py
+    #   libcoveocds
 odfpy==1.4.1
     # via
     #   -r requirements.txt
@@ -172,8 +176,6 @@ outcome==1.2.0
     # via trio
 packaging==21.0
     # via
-    #   -r requirements.txt
-    #   bleach
     #   build
     #   pytest
 persistent==4.7.0
@@ -183,6 +185,10 @@ persistent==4.7.0
     #   zodb
 pip-tools==6.13.0
     # via -r requirements_dev.in
+platformdirs==4.1.0
+    # via
+    #   -r requirements.txt
+    #   requests-cache
 pluggy==1.0.0
     # via pytest
 pycodestyle==2.7.0
@@ -196,15 +202,9 @@ pyflakes==2.3.1
 pymemcache==3.5.0
     # via -r requirements.txt
 pyparsing==2.4.7
-    # via
-    #   -r requirements.txt
-    #   packaging
+    # via packaging
 pyproject-hooks==1.0.0
     # via build
-pyrsistent==0.18.0
-    # via
-    #   -r requirements.txt
-    #   jsonschema
 pysocks==1.7.1
     # via urllib3
 pytest==7.3.1
@@ -223,6 +223,13 @@ pytz==2021.1
     #   -r requirements.txt
     #   django
     #   flattentool
+referencing==0.32.0
+    # via
+    #   -r requirements.txt
+    #   jsonschema
+    #   jsonschema-specifications
+    #   libcove
+    #   libcoveocds
 requests==2.31.0
     # via
     #   -r requirements.txt
@@ -230,6 +237,12 @@ requests==2.31.0
     #   libcove
     #   libcoveocds
     #   libcoveweb
+    #   ocdsextensionregistry
+    #   requests-cache
+requests-cache==1.1.1
+    # via
+    #   -r requirements.txt
+    #   ocdsextensionregistry
 rfc3339-validator==0.1.4
     # via
     #   -r requirements.txt
@@ -238,6 +251,11 @@ rfc3987==1.3.8
     # via
     #   -r requirements.txt
     #   libcove
+rpds-py==0.15.2
+    # via
+    #   -r requirements.txt
+    #   jsonschema
+    #   referencing
 schema==0.7.4
     # via
     #   -r requirements.txt
@@ -249,10 +267,10 @@ sentry-sdk==1.19.0
 six==1.16.0
     # via
     #   -r requirements.txt
-    #   bleach
     #   libsass
     #   pymemcache
     #   rfc3339-validator
+    #   url-normalize
     #   zodb
 sniffio==1.3.0
     # via trio
@@ -279,16 +297,21 @@ trio==0.22.0
     #   trio-websocket
 trio-websocket==0.10.2
     # via selenium
+typing-extensions==4.9.0
+    # via
+    #   -r requirements.txt
+    #   cattrs
+url-normalize==1.4.3
+    # via
+    #   -r requirements.txt
+    #   requests-cache
 urllib3[socks]==2.0.7
     # via
     #   -r requirements.txt
     #   requests
+    #   requests-cache
     #   selenium
     #   sentry-sdk
-webencodings==0.5.1
-    # via
-    #   -r requirements.txt
-    #   bleach
 werkzeug==3.0.1
     # via
     #   -r requirements.txt
