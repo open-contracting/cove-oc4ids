@@ -1,7 +1,6 @@
 import json
 import logging
 import re
-from decimal import Decimal
 
 from cove.views import cove_web_input_error, explore_data_context
 from django.conf import settings
@@ -33,7 +32,7 @@ def explore_oc4ids(request, pk):
         # open the data first so we can inspect for record package
         with open(file_name, encoding="utf-8") as fp:
             try:
-                json_data = json.load(fp, parse_float=Decimal)
+                json_data = json.load(fp)
             except ValueError as err:
                 context = {
                     "sub_title": _("Sorry, we can't process that data"),
@@ -81,7 +80,7 @@ def explore_oc4ids(request, pk):
         )
 
         with open(context["converted_path"], encoding="utf-8") as fp:
-            json_data = json.load(fp, parse_float=Decimal)
+            json_data = json.load(fp)
 
     context = common_checks_oc4ids(context, upload_dir, json_data, schema_oc4ids, lib_cove_oc4ids_config)
 
