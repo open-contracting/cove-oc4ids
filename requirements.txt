@@ -45,7 +45,7 @@ et-xmlfile==1.1.0
     # via openpyxl
 exceptiongroup==1.2.0
     # via cattrs
-flattentool==0.24.0
+flattentool==0.24.1
     # via
     #   libcove
     #   libcoveweb
