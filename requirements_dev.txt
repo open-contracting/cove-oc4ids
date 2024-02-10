@@ -137,7 +137,9 @@ libcove==0.32.0
     #   libcoveocds
     #   libcoveweb
 libcoveoc4ids[perf]==0.5.0
-    # via -r requirements.txt
+    # via
+    #   -r requirements.txt
+    #   libcoveoc4ids
 libcoveocds==0.13.0
     # via
     #   -r requirements.txt
