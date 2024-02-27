@@ -50,6 +50,7 @@ charset-normalizer==2.0.4
 click==8.0.1
     # via
     #   -r requirements.txt
+    #   libcoveoc4ids
     #   libcoveocds
     #   pip-tools
 contextlib2==21.6.0
@@ -136,11 +137,9 @@ libcove==0.32.0
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids[perf]==0.5.0
-    # via
-    #   -r requirements.txt
-    #   libcoveoc4ids
-libcoveocds==0.13.0
+libcoveoc4ids[perf]==0.6.0
+    # via -r requirements.txt
+libcoveocds==0.14.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids

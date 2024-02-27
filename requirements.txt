@@ -27,7 +27,9 @@ cffi==1.14.6
 charset-normalizer==2.0.4
     # via requests
 click==8.0.1
-    # via libcoveocds
+    # via
+    #   libcoveoc4ids
+    #   libcoveocds
 contextlib2==21.6.0
     # via schema
 defusedxml==0.7.1
@@ -73,9 +75,9 @@ libcove==0.32.0
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids[perf]==0.5.0
+libcoveoc4ids[perf]==0.6.0
     # via -r requirements.in
-libcoveocds==0.13.0
+libcoveocds==0.14.0
     # via libcoveoc4ids
 libcoveweb==0.30.2
     # via -r requirements.in
