@@ -154,6 +154,7 @@ LOGGING["loggers"]["django.security.DisallowedHost"] = {
 # OC4IDS Config
 
 COVE_CONFIG = {
+    # lib-cove-web options
     "app_name": "cove_oc4ids",
     "app_base_template": "cove_oc4ids/base.html",
     "app_verbose_name": "Open Contracting for Infrastructure Data Standards Review Tool",
