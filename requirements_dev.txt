@@ -98,7 +98,7 @@ flattentool==0.24.1
     #   libcoveweb
 h11==0.14.0
     # via wsproto
-idna==3.2
+idna==3.7
     # via
     #   -r requirements.txt
     #   requests
@@ -138,9 +138,7 @@ libcove==0.32.0
     #   libcoveocds
     #   libcoveweb
 libcoveoc4ids[perf]==0.6.0
-    # via
-    #   -r requirements.txt
-    #   libcoveoc4ids
+    # via -r requirements.txt
 libcoveocds==0.14.0
     # via
     #   -r requirements.txt
