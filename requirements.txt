@@ -51,7 +51,7 @@ flattentool==0.24.1
     # via
     #   libcove
     #   libcoveweb
-idna==3.2
+idna==3.7
     # via requests
 ijson==3.1.4
     # via flattentool
