@@ -79,7 +79,7 @@ libcoveoc4ids[perf]==0.6.0
     # via -r requirements.in
 libcoveocds==0.14.0
     # via libcoveoc4ids
-libcoveweb==0.30.2
+libcoveweb==0.30.3
     # via -r requirements.in
 lxml==4.9.1
     # via flattentool
