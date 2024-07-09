@@ -91,7 +91,7 @@ exceptiongroup==1.2.0
     #   trio-websocket
 flake8==3.9.2
     # via -r requirements_dev.in
-flattentool==0.24.1
+flattentool==0.25.0
     # via
     #   -r requirements.txt
     #   libcove
@@ -131,7 +131,7 @@ jsonschema-specifications==2023.11.2
     # via
     #   -r requirements.txt
     #   jsonschema
-libcove==0.32.0
+libcove==0.32.1
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
@@ -143,7 +143,7 @@ libcoveocds==0.14.0
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
-libcoveweb==0.30.3
+libcoveweb==0.30.4
     # via -r requirements.txt
 libsass==0.21.0
     # via -r requirements_dev.in
