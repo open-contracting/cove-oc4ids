@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-asgiref==3.4.1
+asgiref==3.8.1
     # via django
 attrs==23.1.0
     # via
@@ -34,12 +34,12 @@ contextlib2==21.6.0
     # via schema
 defusedxml==0.7.1
     # via odfpy
-django==3.2.25
+django==4.2.16
     # via
     #   -r requirements.in
     #   django-bootstrap3
     #   libcoveweb
-django-bootstrap3==15.0.0
+django-bootstrap3==24.2
     # via
     #   -r requirements.in
     #   libcoveweb
@@ -104,9 +104,7 @@ pycparser==2.20
 pymemcache==3.5.0
     # via -r requirements.in
 pytz==2021.1
-    # via
-    #   django
-    #   flattentool
+    # via flattentool
 referencing==0.32.0
     # via
     #   jsonschema
@@ -145,7 +143,9 @@ sqlparse==0.5.0
 transaction==3.0.1
     # via zodb
 typing-extensions==4.9.0
-    # via cattrs
+    # via
+    #   asgiref
+    #   cattrs
 url-normalize==1.4.3
     # via requests-cache
 urllib3==2.2.2
