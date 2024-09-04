@@ -49,7 +49,7 @@ Translators can provide translations for this application by becoming a collabor
 
 ### Translations for Developers
 
-For more information about Django's translation framework, see https://docs.djangoproject.com/en/1.8/topics/i18n/translation/
+For more information about Django's translation framework, see https://docs.djangoproject.com/en/4.2/topics/i18n/translation/
 
 If you add new text to the interface, ensure to wrap it in the relevant gettext blocks/functions.
 
