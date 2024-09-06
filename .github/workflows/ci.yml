@@ -24,6 +24,4 @@ jobs:
           ./manage.py makemigrations --check --dry-run
           ./manage.py check --fail-level WARNING
           pytest -W error --cov cove_oc4ids --cov cove_project
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: coveralls --service=github
+      - uses: coverallsapp/github-action@v2
