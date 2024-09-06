@@ -23,5 +23,5 @@ jobs:
           ./manage.py migrate
           ./manage.py makemigrations --check --dry-run
           ./manage.py check --fail-level WARNING
-          pytest -W error --cov cove_oc4ids --cov cove_project
+          coverage run --source=cove_oc4ids,cove_project -m pytest -W error
       - uses: coverallsapp/github-action@v2
