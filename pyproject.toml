@@ -1,3 +1,7 @@
+[project]
+name = "cove-oc4ids"
+version = "0.0.0"
+
 [tool.black]
 line-length = 119
 

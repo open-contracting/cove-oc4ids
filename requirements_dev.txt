@@ -37,6 +37,8 @@ cffi==1.14.6
     # via
     #   -r requirements.txt
     #   persistent
+cfgv==3.4.0
+    # via pre-commit
 charset-normalizer==2.0.4
     # via
     #   -r requirements.txt
@@ -56,6 +58,8 @@ defusedxml==0.7.1
     # via
     #   -r requirements.txt
     #   odfpy
+distlib==0.3.8
+    # via virtualenv
 django==4.2.16
     # via
     #   -r requirements.txt
@@ -76,6 +80,8 @@ exceptiongroup==1.2.2
     #   pytest
     #   trio
     #   trio-websocket
+filelock==3.15.4
+    # via virtualenv
 flattentool==0.26.0
     # via
     #   -r requirements.txt
@@ -83,6 +89,8 @@ flattentool==0.26.0
     #   libcoveweb
 h11==0.14.0
     # via wsproto
+identify==2.6.0
+    # via pre-commit
 idna==3.7
     # via
     #   -r requirements.txt
@@ -138,6 +146,8 @@ markupsafe==2.1.2
     # via
     #   -r requirements.txt
     #   werkzeug
+nodeenv==1.9.1
+    # via pre-commit
 ocdsextensionregistry==0.3.8
     # via
     #   -r requirements.txt
@@ -154,7 +164,7 @@ orjson==3.9.15
     # via -r requirements.txt
 outcome==1.2.0
     # via trio
-packaging==21.0
+packaging==24.1
     # via pytest
 persistent==4.7.0
     # via
@@ -165,16 +175,17 @@ platformdirs==4.1.0
     # via
     #   -r requirements.txt
     #   requests-cache
+    #   virtualenv
 pluggy==1.0.0
     # via pytest
+pre-commit==3.8.0
+    # via -r requirements_dev.in
 pycparser==2.20
     # via
     #   -r requirements.txt
     #   cffi
 pymemcache==4.0.0
     # via -r requirements.txt
-pyparsing==2.4.7
-    # via packaging
 pysocks==1.7.1
     # via urllib3
 pytest==7.3.1
@@ -189,6 +200,8 @@ pytz==2021.1
     # via
     #   -r requirements.txt
     #   flattentool
+pyyaml==6.0.2
+    # via pre-commit
 referencing==0.32.0
     # via
     #   -r requirements.txt
@@ -279,6 +292,8 @@ urllib3==2.2.2
     #   requests-cache
     #   selenium
     #   sentry-sdk
+virtualenv==20.26.3
+    # via pre-commit
 werkzeug==3.0.3
     # via
     #   -r requirements.txt
