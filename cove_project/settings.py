@@ -36,7 +36,7 @@ FATHOM = {
 }
 VALIDATION_ERROR_LOCATIONS_LENGTH = settings.VALIDATION_ERROR_LOCATIONS_LENGTH
 VALIDATION_ERROR_LOCATIONS_SAMPLE = settings.VALIDATION_ERROR_LOCATIONS_SAMPLE
-DELETE_FILES_AFTER_DAYS = int(os.getenv("DELETE_FILES_AFTER_DAYS", 90))
+DELETE_FILES_AFTER_DAYS = int(os.getenv("DELETE_FILES_AFTER_DAYS", "90"))
 
 # We can't take MEDIA_ROOT and MEDIA_URL from cove settings,
 # ... otherwise the files appear under the BASE_DIR that is the Cove library install.

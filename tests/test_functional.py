@@ -27,8 +27,7 @@ def browser(request):
 def server_url(request, live_server):
     if "CUSTOM_SERVER_URL" in os.environ:
         return os.environ["CUSTOM_SERVER_URL"]
-    else:
-        return live_server.url
+    return live_server.url
 
 
 @pytest.mark.parametrize(

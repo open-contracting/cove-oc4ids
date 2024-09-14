@@ -62,9 +62,18 @@ def explore_oc4ids(request, pk):
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
 
         # This feature is disabled, because `flattened.xlsx` was requested once in 14 days as of 2020-10-06.
-        # context.update(convert_json(upload_dir, upload_url, file_name, lib_cove_oc4ids_config,
-        #                             schema_url=schema_oc4ids.schema_url, replace=True,
-        #                             request=request, flatten=True))
+        # > context.update(
+        # >     convert_json(
+        # >         upload_dir,
+        # >         upload_url,
+        # >         file_name,
+        # >         lib_cove_oc4ids_config,
+        # >         schema_url=schema_oc4ids.schema_url,
+        # >         replace=True,
+        # >         request=request,
+        # >         flatten=True,
+        # >     )
+        # > )
     else:
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
         context.update(
@@ -85,7 +94,7 @@ def explore_oc4ids(request, pk):
     context = common_checks_oc4ids(context, upload_dir, json_data, schema_oc4ids, lib_cove_oc4ids_config)
 
     for key in ("additional_closed_codelist_values", "additional_open_codelist_values"):
-        for path_string, codelist_info in context[key].items():
+        for codelist_info in context[key].values():
             if codelist_info["codelist_url"].startswith(schema_oc4ids.codelists):
                 codelist_info["codelist_url"] = (
                     "https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#"
