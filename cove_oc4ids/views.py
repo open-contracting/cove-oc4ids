@@ -91,7 +91,7 @@ def explore_oc4ids(request, pk):
         with open(context["converted_path"], encoding="utf-8") as fp:
             json_data = json.load(fp)
 
-    context = common_checks_oc4ids(context, upload_dir, json_data, schema_oc4ids, lib_cove_oc4ids_config)
+    context = common_checks_oc4ids(context, upload_dir, json_data, schema_oc4ids)
 
     for key in ("additional_closed_codelist_values", "additional_open_codelist_values"):
         for codelist_info in context[key].values():
