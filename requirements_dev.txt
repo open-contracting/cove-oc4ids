@@ -120,7 +120,7 @@ libcove==0.32.1
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids==0.7.0
+libcoveoc4ids==0.7.1
     # via -r requirements.txt
 libcoveocds==0.15.0
     # via
