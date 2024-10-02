@@ -15,6 +15,7 @@ jobs:
       # Check requirements.txt contains production requirements.
       - run: ./manage.py --help
       - run: pip install -r requirements_dev.txt
+      - run: ./manage.py collectstatic --noinput -v2
       - name: Run checks and tests
         env:
           PYTHONWARNINGS: error
