@@ -251,6 +251,10 @@ COVE_CONFIG = {
     "support_email": "data@open-contracting.org",
 }
 
+DELETE_FILES_AFTER_DAYS = int(os.getenv("DELETE_FILES_AFTER_DAYS", "90"))  # default 7
+REQUESTS_TIMEOUT = int(os.getenv("REQUESTS_TIMEOUT", "10"))  # default None
+VALIDATION_ERROR_LOCATIONS_LENGTH = int(os.getenv("VALIDATION_ERROR_LOCATIONS_LENGTH", "100"))  # default 1000
+
 
 # Project configuration
 
