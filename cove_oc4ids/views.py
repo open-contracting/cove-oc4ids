@@ -62,18 +62,8 @@ def explore_oc4ids(request, pk):
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
 
         # This feature is disabled, because `flattened.xlsx` was requested once in 14 days as of 2020-10-06.
-        # > context.update(
-        # >     convert_json(
-        # >         upload_dir,
-        # >         upload_url,
-        # >         file_name,
-        # >         lib_cove_oc4ids_config,
-        # >         schema_url=schema_oc4ids.schema_url,
-        # >         replace=True,
-        # >         request=request,
-        # >         flatten=True,
-        # >     )
-        # > )
+        # context.update(convert_json(upload_dir, upload_url, file_name, lib_cove_oc4ids_config,
+        # schema_url=schema_oc4ids.schema_url, replace=True, request=request, flatten=True))
     else:
         schema_oc4ids = SchemaOC4IDS(lib_cove_oc4ids_config=lib_cove_oc4ids_config)
         context.update(
