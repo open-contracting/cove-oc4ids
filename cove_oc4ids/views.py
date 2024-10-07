@@ -29,7 +29,6 @@ def explore_oc4ids(request, pk):
     file_type = context["file_type"]
 
     if file_type == "json":
-        # open the data first so we can inspect for record package
         with open(file_name, encoding="utf-8") as fp:
             try:
                 json_data = json.load(fp)
