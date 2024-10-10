@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 20:47+0000\n"
+"POT-Creation-Date: 2024-10-10 01:19+0000\n"
 "PO-Revision-Date: 2020-10-06 10:51+0000\n"
 "Last-Translator: James McKinney, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-"
@@ -99,46 +99,46 @@ msgstr ""
 "Todas las referencias de organización deben de tener una entrada asociada en "
 "la matriz <code>partes</code> con un <code>id</code>igual."
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:26
+#: cove_oc4ids/templates/cove_oc4ids/base.html:25
 msgid "Open Contracting for Infrastructure Data Standard"
 msgstr "Estándar de Contrataciones Abiertas para Datos de Infraestructura"
 
 #. Translators: Label of a button that triggers search
-#: cove_oc4ids/templates/cove_oc4ids/base.html:45
+#: cove_oc4ids/templates/cove_oc4ids/base.html:44
 msgid "Go"
 msgstr "Ir"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:52
+#: cove_oc4ids/templates/cove_oc4ids/base.html:51
 msgid " Data Review Tool"
 msgstr "Herramienta de Revisión de Datos"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:52
+#: cove_oc4ids/templates/cove_oc4ids/base.html:51
 msgid "beta"
 msgstr "beta"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:55
+#: cove_oc4ids/templates/cove_oc4ids/base.html:54
 msgid " OC4IDS Documentation "
 msgstr "Documentación OC4IDS"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:78
+#: cove_oc4ids/templates/cove_oc4ids/base.html:77
 msgid "Open Contracting Partnership"
 msgstr "Open Contracting Partnership"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:79
+#: cove_oc4ids/templates/cove_oc4ids/base.html:78
 msgid "CoST - Infrastructure Transparency Initiative"
 msgstr "CoST - Infrastructure Transparency Initiative"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:80
+#: cove_oc4ids/templates/cove_oc4ids/base.html:79
 msgid "Open Contracting for Infrastructure Data Standards Toolkit"
 msgstr ""
 "Herramientas del Estándar de Contrataciones Abiertas para Datos de "
 "Infraestructura "
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:89
+#: cove_oc4ids/templates/cove_oc4ids/base.html:88
 msgid "About OC4IDS"
 msgstr "Sobre OC4IDS"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:90
+#: cove_oc4ids/templates/cove_oc4ids/base.html:89
 msgid ""
 "The <a href=\"https://standard.open-contracting.org/infrastructure/\">Open "
 "Contracting for Infrastructure Data Standard</a> (OC4IDS) describes how to "
@@ -155,7 +155,7 @@ msgstr ""
 "para soportar la divulgación escalable y el monitoreo de proyectos de "
 "infraestructura. "
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:92
+#: cove_oc4ids/templates/cove_oc4ids/base.html:91
 #, python-format
 msgid ""
 "Trillions of dollars are spent every year on infrastructure and estimates "
@@ -171,36 +171,36 @@ msgstr ""
 "infraestructura de mejor calidad, más asequible y más accesible para los "
 "gobiernos, ciudadanos y empresas."
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:98
+#: cove_oc4ids/templates/cove_oc4ids/base.html:97
 msgid "Check and review"
 msgstr "Ver y revisar"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:99
+#: cove_oc4ids/templates/cove_oc4ids/base.html:98
 msgid "This tool helps you to:"
 msgstr "Esta herramienta le ayuda a:"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:101
+#: cove_oc4ids/templates/cove_oc4ids/base.html:100
 msgid "Check that your OC4IDS data complies with the schema"
 msgstr "Revisar que sus datos OC4DIS cumplan con el esquema"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:102
+#: cove_oc4ids/templates/cove_oc4ids/base.html:101
 msgid "Inspect key contents of your data to review data quality"
 msgstr ""
 "Inspeccionar que los contenidos claves de sus datos para revisar la calidad "
 "de los datos"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:103
+#: cove_oc4ids/templates/cove_oc4ids/base.html:102
 msgid ""
 "Explore your data's coverage of OC4IDS fields to identify possible additions"
 msgstr ""
 "Explora la cobertura de campos OC4IDS de tus datos para identificar posibles "
 "adiciones"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:117
+#: cove_oc4ids/templates/cove_oc4ids/base.html:116
 msgid "Using the Data Review Tool"
 msgstr "Utilizando la Herramienta de Revisión de Datos"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:118
+#: cove_oc4ids/templates/cove_oc4ids/base.html:117
 msgid ""
 "You can upload, paste or provide a link to data published using the <a "
 "href=\"https://standard.open-contracting.org/infrastructure/\">Open "
@@ -210,15 +210,15 @@ msgstr ""
 "<a href=\"https://standard.open-contracting.org/infrastructure/\">Estándar "
 "de Contrataciones Abiertas para Datos de Infraestructura</a>"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:118
+#: cove_oc4ids/templates/cove_oc4ids/base.html:117
 msgid " This can be:"
 msgstr "Esto puede ser:"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:120
+#: cove_oc4ids/templates/cove_oc4ids/base.html:119
 msgid "<strong>A JSON file</strong> - following the OC4IDS schema;"
 msgstr "<strong>Un archivo Json</strong> - siguiendo el esquema OC4IDS;"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:121
+#: cove_oc4ids/templates/cove_oc4ids/base.html:120
 msgid ""
 "<strong>A CSV file or Excel Spreadsheet</strong> - using a flattened "
 "serialization of OC4IDS;"
@@ -226,7 +226,7 @@ msgstr ""
 "<strong>Un archivo CSV o una hoja de cálculo Excel</strong> - utilizando una "
 "serialización aplanada de OC4IDS;"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:123
+#: cove_oc4ids/templates/cove_oc4ids/base.html:122
 msgid ""
 "Supported encodings are UTF-8 for JSON and UTF-8, Windows-1252 and "
 "ISO-8859-1 for CSV."
@@ -234,7 +234,7 @@ msgstr ""
 "Las codificaciones compatibles son UTF-8 para JSON y UTF-8, Windows-1252 and "
 "ISO-8859-1 para CSV."
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:124
+#: cove_oc4ids/templates/cove_oc4ids/base.html:123
 msgid ""
 "The application works with data provided in an <a href=\"https://standard."
 "open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
@@ -244,7 +244,7 @@ msgstr ""
 "standard.open-contracting.org/infrastructure/latest/en/reference/package/"
 "\">paquete de proyecto OC4IDS</a>."
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:125
+#: cove_oc4ids/templates/cove_oc4ids/base.html:124
 msgid ""
 "If your data passes basic structural checks, the tool will then present a "
 "report on data quality, and information about the contents of your file. "
@@ -253,7 +253,7 @@ msgstr ""
 "presentará un reporte sobre la calidad de los datos e información sobre el "
 "contenido de tu archivo."
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:126
+#: cove_oc4ids/templates/cove_oc4ids/base.html:125
 msgid ""
 "Data is stored for 7 days at a randomly generated URL. You can share this "
 "link with others to support discussion of data quality."
@@ -262,45 +262,45 @@ msgstr ""
 "compartir este link con otros para apoyar la discusión de la calidad de los "
 "datos."
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:127
+#: cove_oc4ids/templates/cove_oc4ids/base.html:126
 msgid ""
-"To preview how the data review tool works, try loading some <a href=\"?"
-"source_url=https://standard.open-contracting.org/infrastructure/latest/en/"
-"_static/example.json\">sample data</a>."
+"To preview how the data review tool works, try loading: <code>https://"
+"standard.open-contracting.org/infrastructure/latest/en/_static/example.json</"
+"code>"
 msgstr ""
-"Para ver como funciona la herramienta de revisión de datos, intente subir <a "
-"href=\"?source_url=https://standard.open-contracting.org/infrastructure/"
-"latest/en/_static/example.json\">datos de ejemplo</a>."
+"Para ver como funciona la herramienta de revisión de datos, intente subir <code>"
+"https://standard.open-contracting.org/infrastructure/"
+"latest/en/_static/example.json</code>"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
+#: cove_oc4ids/templates/cove_oc4ids/base.html:135
 msgid "Built by"
 msgstr "Construida por"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
+#: cove_oc4ids/templates/cove_oc4ids/base.html:135
 msgid "Open Data Services"
 msgstr "Open Data Services"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:137
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "The code for this site is available on"
 msgstr "El código para este sitio esta disponible en"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:137
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "GitHub"
 msgstr "GitHub"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:137
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "Licence"
 msgstr "Licencia"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:137
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "AGPLv3"
 msgstr "AGPLv3"
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:137
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "Report/View issues"
 msgstr "Reportar/Ver problemas "
 
-#: cove_oc4ids/templates/cove_oc4ids/base.html:137
+#: cove_oc4ids/templates/cove_oc4ids/base.html:136
 msgid "cove-oc4ids issues"
 msgstr "issues cove-oc4ids"
 
@@ -677,15 +677,15 @@ msgstr ""
 "Expande un objeto para comprobar la cobertura en sus campos, que puede ser "
 "menor que la cobertura del objeto."
 
-#: cove_oc4ids/views.py:38 cove_oc4ids/views.py:55
+#: cove_oc4ids/views.py:37 cove_oc4ids/views.py:54
 msgid "Sorry, we can't process that data"
 msgstr "Lo sentimos, no podemos procesar estos datos"
 
-#: cove_oc4ids/views.py:40 cove_oc4ids/views.py:57
+#: cove_oc4ids/views.py:39 cove_oc4ids/views.py:56
 msgid "Try Again"
 msgstr "Intente de nuevo"
 
-#: cove_oc4ids/views.py:43
+#: cove_oc4ids/views.py:42
 msgid ""
 "We think you tried to upload a JSON file, but it is not well formed JSON.\n"
 "\n"
@@ -698,7 +698,7 @@ msgstr ""
 "<span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></"
 "span><strong>Mensaje de error:</strong>{}"
 
-#: cove_oc4ids/views.py:58
+#: cove_oc4ids/views.py:57
 msgid ""
 "OC4IDS JSON should have an object as the top level, the JSON you supplied "
 "does not."
