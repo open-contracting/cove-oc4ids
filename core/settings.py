@@ -248,7 +248,6 @@ COVE_CONFIG = {
     "app_verbose_name": "Open Contracting for Infrastructure Data Standards Review Tool",
     "app_strapline": "Review your OC4IDS data.",
     "input_methods": ["upload", "url", "text"],
-    "input_template": "cove_oc4ids/input.html",
     "support_email": "data@open-contracting.org",
 }
 
