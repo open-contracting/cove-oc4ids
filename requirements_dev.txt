@@ -56,7 +56,7 @@ defusedxml==0.7.1
     # via
     #   -r requirements.txt
     #   odfpy
-django==4.2.17
+django==4.2.18
     # via
     #   -r requirements.txt
     #   django-bootstrap3
@@ -76,7 +76,7 @@ flattentool==0.26.0
     #   -r requirements.txt
     #   libcove
     #   libcoveweb
-gunicorn==23.0.0
+gunicorn[setproctitle]==23.0.0
     # via -r requirements.txt
 h11==0.14.0
     # via wsproto
@@ -117,7 +117,7 @@ libcove==0.32.1
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids==0.8.0
+libcoveoc4ids[perf]==0.8.0
     # via -r requirements.txt
 libcoveocds==0.16.4
     # via
@@ -148,7 +148,9 @@ openpyxl==3.0.7
     #   -r requirements.txt
     #   flattentool
 orjson==3.9.15
-    # via -r requirements.txt
+    # via
+    #   -r requirements.txt
+    #   libcoveoc4ids
 outcome==1.2.0
     # via trio
 packaging==24.1
@@ -228,14 +230,9 @@ selenium==4.11.2
 sentry-sdk==2.8.0
     # via -r requirements.txt
 setproctitle==1.3.3
-    # via -r requirements.txt
-setuptools==75.6.0
     # via
     #   -r requirements.txt
-    #   zc-lockfile
-    #   zc-zlibstorage
-    #   zodbpickle
-    #   zope-interface
+    #   gunicorn
 six==1.16.0
     # via
     #   -r requirements.txt
@@ -265,7 +262,7 @@ url-normalize==1.4.3
     # via
     #   -r requirements.txt
     #   requests-cache
-urllib3==2.2.2
+urllib3[socks]==2.2.2
     # via
     #   -r requirements.txt
     #   requests
