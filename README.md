@@ -1,9 +1,5 @@
 # cove-oc4ids
 
-### Caching
-
-In non-dev or (not DEBUG mode) the default settings make use of a local memcached server. This backend requires a local memcached server running. On debian based systems this can be installed with `sudo apt install memcached`.
-
 ## Dev installation
 
 ```bash

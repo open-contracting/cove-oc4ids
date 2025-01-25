@@ -229,8 +229,8 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 5 MB
 if production:
     CACHES = {
         "default": {
-            "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
-            "LOCATION": os.getenv("MEMCACHED_URL", "127.0.0.1:11211"),
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": os.getenv("REDIS_URL", "redis://localhost:6379/0"),
         }
     }
 

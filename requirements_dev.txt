@@ -80,6 +80,8 @@ gunicorn[setproctitle]==23.0.0
     # via -r requirements.txt
 h11==0.14.0
     # via wsproto
+hiredis==3.1.0
+    # via -r requirements.txt
 idna==3.7
     # via
     #   -r requirements.txt
@@ -173,8 +175,6 @@ pycparser==2.20
     # via
     #   -r requirements.txt
     #   cffi
-pymemcache==4.0.0
-    # via -r requirements.txt
 pysocks==1.7.1
     # via urllib3
 pytest==7.3.1
@@ -189,6 +189,8 @@ pytz==2021.1
     # via
     #   -r requirements.txt
     #   flattentool
+redis==5.2.1
+    # via -r requirements.txt
 referencing==0.32.0
     # via
     #   -r requirements.txt
