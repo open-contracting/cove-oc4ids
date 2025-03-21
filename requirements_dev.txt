@@ -76,14 +76,12 @@ flattentool==0.26.0
     #   -r requirements.txt
     #   libcove
     #   libcoveweb
-gunicorn[setproctitle]==23.0.0
+gunicorn==23.0.0
     # via -r requirements.txt
 h11==0.14.0
     # via wsproto
 hiredis==3.1.0
-    # via
-    #   -r requirements.txt
-    #   redis
+    # via -r requirements.txt
 idna==3.7
     # via
     #   -r requirements.txt
@@ -121,13 +119,13 @@ libcove==0.32.1
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids[perf]==0.8.0
+libcoveoc4ids==0.8.0
     # via -r requirements.txt
 libcoveocds==0.16.4
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
-libcoveweb==0.31.1
+libcoveweb @ git+https://github.com/jpmckinney/lib-cove-web.git@b2f7a6e1fa8d8cbaec574a38792dc3c6bb881eb4#egg=libcoveweb
     # via -r requirements.txt
 libsass==0.21.0
     # via -r requirements_dev.in
@@ -152,9 +150,7 @@ openpyxl==3.0.7
     #   -r requirements.txt
     #   flattentool
 orjson==3.9.15
-    # via
-    #   -r requirements.txt
-    #   libcoveoc4ids
+    # via -r requirements.txt
 outcome==1.2.0
     # via trio
 packaging==24.1
@@ -191,7 +187,7 @@ pytz==2021.1
     # via
     #   -r requirements.txt
     #   flattentool
-redis[hiredis]==5.2.1
+redis==5.2.1
     # via -r requirements.txt
 referencing==0.32.0
     # via
@@ -234,9 +230,14 @@ selenium==4.11.2
 sentry-sdk==2.8.0
     # via -r requirements.txt
 setproctitle==1.3.3
+    # via -r requirements.txt
+setuptools==77.0.3
     # via
     #   -r requirements.txt
-    #   gunicorn
+    #   zc-lockfile
+    #   zc-zlibstorage
+    #   zodbpickle
+    #   zope-interface
 six==1.16.0
     # via
     #   -r requirements.txt
@@ -266,7 +267,7 @@ url-normalize==1.4.3
     # via
     #   -r requirements.txt
     #   requests-cache
-urllib3[socks]==2.2.2
+urllib3==2.2.2
     # via
     #   -r requirements.txt
     #   requests
