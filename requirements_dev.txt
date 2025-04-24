@@ -78,7 +78,7 @@ flattentool==0.26.0
     #   libcoveweb
 gunicorn==23.0.0
     # via -r requirements.txt
-h11==0.14.0
+h11==0.16.0
     # via wsproto
 hiredis==3.1.0
     # via -r requirements.txt
@@ -125,7 +125,7 @@ libcoveocds==0.16.4
     # via
     #   -r requirements.txt
     #   libcoveoc4ids
-libcoveweb @ git+https://github.com/jpmckinney/lib-cove-web.git@b2f7a6e1fa8d8cbaec574a38792dc3c6bb881eb4#egg=libcoveweb
+libcoveweb @ git+https://github.com/jpmckinney/lib-cove-web.git@b2f7a6e1fa8d8cbaec574a38792dc3c6bb881eb4
     # via -r requirements.txt
 libsass==0.21.0
     # via -r requirements_dev.in
@@ -231,13 +231,6 @@ sentry-sdk==2.8.0
     # via -r requirements.txt
 setproctitle==1.3.3
     # via -r requirements.txt
-setuptools==77.0.3
-    # via
-    #   -r requirements.txt
-    #   zc-lockfile
-    #   zc-zlibstorage
-    #   zodbpickle
-    #   zope-interface
 six==1.16.0
     # via
     #   -r requirements.txt
@@ -267,7 +260,7 @@ url-normalize==1.4.3
     # via
     #   -r requirements.txt
     #   requests-cache
-urllib3==2.2.2
+urllib3[socks]==2.2.2
     # via
     #   -r requirements.txt
     #   requests
