@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:19+0000\n"
+"POT-Creation-Date: 2025-08-19 15:56+0000\n"
 "PO-Revision-Date: 2020-10-06 10:51+0000\n"
 "Last-Translator: James McKinney, 2023\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-"
@@ -236,9 +236,9 @@ msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:123
 msgid ""
-"The application works with data provided in an <a href=\"https://standard."
-"open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
-"project package</a>."
+"The application works with data provided in an <a href=\"https://"
+"standard.open-contracting.org/infrastructure/latest/en/reference/package/"
+"\">OC4IDS project package</a>."
 msgstr ""
 "La aplicación funciona con datos que se proporcionan en un <a href=\"https://"
 "standard.open-contracting.org/infrastructure/latest/en/reference/package/"
@@ -268,41 +268,9 @@ msgid ""
 "standard.open-contracting.org/infrastructure/latest/en/_static/example.json</"
 "code>"
 msgstr ""
-"Para ver como funciona la herramienta de revisión de datos, intente subir <code>"
-"https://standard.open-contracting.org/infrastructure/"
-"latest/en/_static/example.json</code>"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:135
-msgid "Built by"
-msgstr "Construida por"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:135
-msgid "Open Data Services"
-msgstr "Open Data Services"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "The code for this site is available on"
-msgstr "El código para este sitio esta disponible en"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "GitHub"
-msgstr "GitHub"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "Licence"
-msgstr "Licencia"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "AGPLv3"
-msgstr "AGPLv3"
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "Report/View issues"
-msgstr "Reportar/Ver problemas "
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "cove-oc4ids issues"
-msgstr "issues cove-oc4ids"
+"Para ver como funciona la herramienta de revisión de datos, intente subir "
+"<code>https://standard.open-contracting.org/infrastructure/latest/en/_static/"
+"example.json</code>"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:8
 msgid "Load New File"
@@ -549,12 +517,12 @@ msgid ""
 "contracting/infrastructure/issues/new\">OC4IDS issue tracker.</a>"
 msgstr ""
 "Asegúrese de dar la definición de cualquier valor adicional a la lista de "
-"código que incluya dentro de su <a href=\"https://standard.open-contracting."
-"org/latest/en/guidance/publish/#finalize-your-publication-policy\">política "
-"de publicación</a>, y si cree que deben de ser valores recomendados en la "
-"lista de código abierta, por favor haga una sugerencia en el <a "
-"href=\"https://github.com/open-contracting/infrastructure/issues/new\"> "
-"rastreador de issues OC4IDS.</a>"
+"código que incluya dentro de su <a href=\"https://standard.open-"
+"contracting.org/latest/en/guidance/publish/#finalize-your-publication-"
+"policy\">política de publicación</a>, y si cree que deben de ser valores "
+"recomendados en la lista de código abierta, por favor haga una sugerencia en "
+"el <a href=\"https://github.com/open-contracting/infrastructure/issues/"
+"new\"> rastreador de issues OC4IDS.</a>"
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:307
 msgid "Conformance (Rules)"
@@ -608,8 +576,8 @@ msgid ""
 "If a field is on an object in an array, then coverage is reported for each "
 "object in the array. For example, in a data file with 100 projects, all of "
 "which have 5 parties, the coverage for the <code>parties</code>field will be "
-"calculated out of 100, but coverage for its child fields (like <code>parties."
-"id</code>) will be calculated out of 500."
+"calculated out of 100, but coverage for its child fields (like "
+"<code>parties.id</code>) will be calculated out of 500."
 msgstr ""
 "Si un campo está en un objeto en un array, entonces la cobertura es "
 "reportada por  cada objeto en el array. Por ejemplo, en un archivo de datos "
@@ -686,6 +654,7 @@ msgid "Try Again"
 msgstr "Intente de nuevo"
 
 #: cove_oc4ids/views.py:42
+#, python-brace-format
 msgid ""
 "We think you tried to upload a JSON file, but it is not well formed JSON.\n"
 "\n"

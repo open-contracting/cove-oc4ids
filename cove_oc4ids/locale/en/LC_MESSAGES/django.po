@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 01:19+0000\n"
+"POT-Creation-Date: 2025-08-19 15:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -186,9 +186,9 @@ msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:123
 msgid ""
-"The application works with data provided in an <a href=\"https://standard."
-"open-contracting.org/infrastructure/latest/en/reference/package/\">OC4IDS "
-"project package</a>."
+"The application works with data provided in an <a href=\"https://"
+"standard.open-contracting.org/infrastructure/latest/en/reference/package/"
+"\">OC4IDS project package</a>."
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/base.html:124
@@ -208,38 +208,6 @@ msgid ""
 "To preview how the data review tool works, try loading: <code>https://"
 "standard.open-contracting.org/infrastructure/latest/en/_static/example.json</"
 "code>"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:135
-msgid "Built by"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:135
-msgid "Open Data Services"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "The code for this site is available on"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "GitHub"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "Licence"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "AGPLv3"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "Report/View issues"
-msgstr ""
-
-#: cove_oc4ids/templates/cove_oc4ids/base.html:136
-msgid "cove-oc4ids issues"
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:8
@@ -490,8 +458,8 @@ msgid ""
 "If a field is on an object in an array, then coverage is reported for each "
 "object in the array. For example, in a data file with 100 projects, all of "
 "which have 5 parties, the coverage for the <code>parties</code>field will be "
-"calculated out of 100, but coverage for its child fields (like <code>parties."
-"id</code>) will be calculated out of 500."
+"calculated out of 100, but coverage for its child fields (like "
+"<code>parties.id</code>) will be calculated out of 500."
 msgstr ""
 
 #: cove_oc4ids/templates/cove_oc4ids/explore.html:371
@@ -550,6 +518,7 @@ msgid "Try Again"
 msgstr ""
 
 #: cove_oc4ids/views.py:42
+#, python-brace-format
 msgid ""
 "We think you tried to upload a JSON file, but it is not well formed JSON.\n"
 "\n"
