@@ -34,53 +34,6 @@ pysassc -t compressed -I bootstrap cove_ocds/sass/styles-oc4ids.sass cove_ocds/s
 pytest
 ```
 
-## Translations
-
-We use Django's translation framework to provide this application in different languages.
-We have used Google Translate to perform initial translations from English, but expect those translations to be worked on by humans over time.
-
-### Translations for Translators
-
-Translators can provide translations for this application by becoming a collaborator on Transifex https://www.transifex.com/open-contracting-partnership-1/cove-1/
-
-### Translations for Developers
-
-For more information about Django's translation framework, see https://docs.djangoproject.com/en/4.2/topics/i18n/translation/
-
-If you add new text to the interface, ensure to wrap it in the relevant gettext blocks/functions.
-
-In order to generate messages and post them on Transifex:
-
-First check the `Transifex lock <https://opendataservices.plan.io/projects/co-op/wiki/CoVE_Transifex_lock>`, because only one branch can be translated on Transifex at a time.
-
-Then:
-
-```bash
-python manage.py makemessages -l en
-tx push -s
-```
-
-In order to fetch messages from transifex:
-
-```bash
-tx pull -a
-```
-
-In order to compile them:
-
-```bash
-python manage.py compilemessages
-```
-
-Keep the makemessages and pull messages steps in their own commits separate from the text changes.
-
-To check that all new text is written so that it is able to be translated you could install and run `django-template-i18n-lint`
-
-```bash
-pip install django-template-i18n-lint
-django-template-i18n-lint cove
-```
-
 ## Command-line interface
 
 [lib-cove-oc4ids](https://github.com/open-contracting/lib-cove-oc4ids) offers a command-line interface for validating OC4IDS data.
