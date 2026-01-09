@@ -273,7 +273,7 @@ urllib3[socks]==2.6.3
     #   requests-cache
     #   selenium
     #   sentry-sdk
-werkzeug==3.1.4
+werkzeug==3.1.5
     # via
     #   -r requirements.txt
     #   libcoveweb
