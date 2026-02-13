@@ -45,7 +45,7 @@ flattentool==0.26.0
     # via
     #   libcove
     #   libcoveweb
-gunicorn==23.0.0
+gunicorn[setproctitle]==23.0.0
     # via -r requirements.in
 hiredis==3.1.0
     # via redis
@@ -73,11 +73,11 @@ libcove==0.32.1
     #   libcoveoc4ids
     #   libcoveocds
     #   libcoveweb
-libcoveoc4ids==0.9.1
+libcoveoc4ids[perf]==0.9.1
     # via -r requirements.in
 libcoveocds==0.16.4
     # via libcoveoc4ids
-libcoveweb @ git+https://github.com/jpmckinney/lib-cove-web.git@b2f7a6e1fa8d8cbaec574a38792dc3c6bb881eb4#egg=libcoveweb
+libcoveweb @ git+https://github.com/jpmckinney/lib-cove-web.git@patch-2
     # via -r requirements.in
 lxml==5.3.0
     # via flattentool
@@ -103,7 +103,7 @@ pycparser==2.20
     # via cffi
 pytz==2021.1
     # via flattentool
-redis==5.2.1
+redis[hiredis]==5.2.1
     # via -r requirements.in
 referencing==0.32.0
     # via
@@ -134,18 +134,12 @@ sentry-sdk==2.8.0
     # via -r requirements.in
 setproctitle==1.3.3
     # via gunicorn
-setuptools==82.0.0
-    # via
-    #   zc-lockfile
-    #   zc-zlibstorage
-    #   zodbpickle
-    #   zope-interface
 six==1.16.0
     # via
     #   rfc3339-validator
     #   url-normalize
     #   zodb
-sqlparse==0.5.0
+sqlparse==0.5.4
     # via django
 transaction==3.0.1
     # via zodb
