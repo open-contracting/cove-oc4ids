@@ -89,7 +89,7 @@ odfpy==1.4.1
     # via flattentool
 openpyxl==3.0.7
     # via flattentool
-orjson==3.11.5
+orjson==3.11.6
     # via libcoveoc4ids
 packaging==24.1
     # via gunicorn
