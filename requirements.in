@@ -1,9 +1,9 @@
-django
+django<5.3
 django-bootstrap3
 gunicorn[setproctitle]
 libcove
 libcoveoc4ids[perf]
-# https://github.com/OpenDataServices/lib-cove-web/pull/153
-git+https://github.com/jpmckinney/lib-cove-web.git@patch-2#egg=libcoveweb
+# https://github.com/OpenDataServices/lib-cove-web/pull/157
+git+https://github.com/jpmckinney/lib-cove-web.git@django52#egg=libcoveweb
 redis[hiredis]
 sentry-sdk
