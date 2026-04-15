@@ -227,7 +227,7 @@ schema==0.7.4
     # via
     #   -r requirements.txt
     #   flattentool
-selenium==4.11.2
+selenium==4.32.0
     # via -r requirements_dev.in
 sentry-sdk==2.8.0
     # via -r requirements.txt
@@ -265,6 +265,8 @@ trio==0.22.0
     #   trio-websocket
 trio-websocket==0.10.2
     # via selenium
+typing-extensions==4.15.0
+    # via selenium
 url-normalize==1.4.3
     # via
     #   -r requirements.txt
@@ -276,6 +278,8 @@ urllib3==2.6.3
     #   requests-cache
     #   selenium
     #   sentry-sdk
+websocket-client==1.9.0
+    # via selenium
 werkzeug==3.1.6
     # via
     #   -r requirements.txt
