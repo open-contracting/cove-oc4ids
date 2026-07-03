@@ -56,7 +56,6 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = (
-    "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
@@ -66,7 +65,6 @@ MIDDLEWARE = (
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "cove.middleware.CoveConfigCurrentApp",
-    "django.middleware.cache.FetchFromCacheMiddleware",
 )
 
 ROOT_URLCONF = "core.urls"
@@ -225,14 +223,6 @@ MEDIA_URL = "media/"
 
 # https://docs.djangoproject.com/en/5.2/ref/settings/#data-upload-max-memory-size
 DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  # 5 MB
-
-if production:
-    CACHES = {
-        "default": {
-            "BACKEND": "django.core.cache.backends.redis.RedisCache",
-            "LOCATION": os.getenv("REDIS_URL", "redis://localhost:6379/0"),
-        }
-    }
 
 
 # Dependency configuration
