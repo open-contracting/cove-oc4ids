@@ -225,7 +225,7 @@ schema==0.7.4
     #   flattentool
 selenium==4.32.0
     # via -r requirements_dev.in
-sentry-sdk==2.8.0
+sentry-sdk==2.73.0
     # via -r requirements.txt
 setproctitle==1.3.8
     # via -r requirements.txt
